@@ -1,0 +1,97 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+\title{
+\textbf{Algebra Lineare}}
+\author{Stefano Piccoli}
+\date{\today}
+\maketitle
+\tableofcontents
+	\chapter*{Introduzione}
+	\addcontentsline{toc}{chapter}{Introduzione}
+        \paragraph{}L'\textbf{Algebra Lineare} si occupa di trovare soluzioni ad equazioni e sistemi \textbf{lineari}.
+            \begin{center} 
+                $$\begin{cases}
+                    E1: x+y=3\\
+                    E2: x+2y=5
+                \end{cases}$$            
+                $E2-E1: \textbf{y=5-3=2}$\\
+                Sostituzione: $\textbf{x=1}$
+            
+                $$\begin{cases}
+                    E1: x+y=3\\
+                    E2: 2x+2y=6
+                \end{cases}$$
+                $E2-E1:0=0$\\
+                \textbf{Hanno le stesse soluzioni (infinità)}\\
+            
+                $$\begin{cases}
+                    E1: x+y=3\\
+                    E2: 2x+2y=5
+                \end{cases}$$
+                $E2-E1: 0=-1$\\
+                \textbf{Nessuna soluzione comune} 
+            \end{center}
+        \paragraph{}Quindi abbiamo 1, $\infty$ o 0 soluzioni comuni. Così sarà in generale. 
+        \section{Equazioni a 3 variabili}
+            \paragraph{}Le soluzioni comuni di 3 equazioni lineari a 3 variabili corrispondono all'intersezione di 3 piani nello spazio tridimensionale.
+            L'intersezione può essere di 3 tipi:
+            \begin{itemize}
+                \item Un punto (\textbf{unica soluzione})
+                \item Una retta o un piano
+                \item 0 (\textbf{$\infty$ soluzioni})
+            \end{itemize}
+        \section{Caso generale}
+        \paragraph{}Un sistema di n equazioni lineari a m variabili.
+        $$\begin{cases}
+            a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m=b_1\\
+            a_{12}x_1+a_{22}x_2+\dots+a_{2m}x_m=b_2\\
+            \dots\\
+            a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m=b_m
+        \end{cases}$$
+        \begin{center}
+            $a_{ij},b_i\in\Re$\\
+            $n,m > 0$\\
+        \end{center}
+        \subsection{Sistema omogeneo}   
+        \paragraph{}Il sistema (E) è \textbf{omogeneo} se $b_1=b_2=$\dots$=b_n=0$ 
+            $$\begin{cases}
+                a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m=0\\
+                a_{12}x_1+a_{22}x_2+\dots+a_{2m}x_m=0\\
+                \dots\\
+                a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m=0
+            \end{cases}$$
+        \subsection{Sistema omogeneo associato}
+            \paragraph{}Un sistema omogeneo associato è un sistema dove la parte prima parte è uguale
+            ad un altro e i coefficienti dopo l'uguale sono \textbf{0}.
+        \subsection{Soluzione di un sistema}
+            \paragraph{}\textbf{Soluzione di un sistema = soluzione di un caso particolare + soluzione dell'omogenea associata}.
+            \paragraph{Esempio} $2x+3y=5$, $n=1, m=2$
+                \subparagraph{Soluzione particolare}
+                    \begin{align*}
+                        &2x+3y=5\\
+                        &x=y=1
+                    \end{align*}
+                \subparagraph{Soluzione omogenea}
+                    \begin{align*}
+                        &2x+3y=0\\
+                        &x=-\frac{3}{2}y
+                    \end{align*}
+                \subparagraph{Soluzione generale}Definiamo s parametro nel ruolo di y.
+                    \begin{align*}
+                        &x=1+(-\frac{3}{2})s\\
+                        &y=1+s
+                    \end{align*}
+        \subsection{Trovare soluzioni comuni}
+            \paragraph{}Per trovare soluzioni comuni di E è necessario semplificare.
+            Le 3 operazioni utili per semplificare sono:
+                    \begin{itemize}
+                        \item Moltiplicare un'equazione $E_i$ per una costante. $\lambda \neq 0$. $E_i\Rightarrow\lambda E_i$ 
+                        \item Moltiplicare un'equazione $E_i$ per $\lambda \neq 0$ e fare la somma con $E_j$.\\ $Ej\Rightarrow E_j+\lambda E_i$. 
+                        \item Scambiare due equazioni.
+                    \end{itemize}
+    
+\end{document}
