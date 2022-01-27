@@ -1,7 +1,8 @@
 \documentclass[a4paper, 12pt]{report}
 \usepackage[italian]{babel}
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
 
 \begin{document}
 \title{
@@ -45,53 +46,224 @@
                 \item 0 (\textbf{$\infty$ soluzioni})
             \end{itemize}
         \section{Caso generale}
-        \paragraph{}Un sistema di n equazioni lineari a m variabili.
-        $$\begin{cases}
-            a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m=b_1\\
-            a_{12}x_1+a_{22}x_2+\dots+a_{2m}x_m=b_2\\
-            \dots\\
-            a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m=b_m
-        \end{cases}$$
-        \begin{center}
-            $a_{ij},b_i\in\Re$\\
-            $n,m > 0$\\
-        \end{center}
-        \subsection{Sistema omogeneo}   
-        \paragraph{}Il sistema (E) è \textbf{omogeneo} se $b_1=b_2=$\dots$=b_n=0$ 
+            \paragraph{}Un sistema di n equazioni lineari a m variabili.
             $$\begin{cases}
-                a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m=0\\
-                a_{12}x_1+a_{22}x_2+\dots+a_{2m}x_m=0\\
-                \dots\\
-                a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m=0
+                a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m=b_1\\
+                a_{12}x_1+a_{22}x_2+\dots+a_{2m}x_m=b_2\\
+                \vdots\\
+                a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m=b_m
             \end{cases}$$
-        \subsection{Sistema omogeneo associato}
-            \paragraph{}Un sistema omogeneo associato è un sistema dove la parte prima parte è uguale
-            ad un altro e i coefficienti dopo l'uguale sono \textbf{0}.
-        \subsection{Soluzione di un sistema}
-            \paragraph{}\textbf{Soluzione di un sistema = soluzione di un caso particolare + soluzione dell'omogenea associata}.
-            \paragraph{Esempio} $2x+3y=5$, $n=1, m=2$
-                \subparagraph{Soluzione particolare}
-                    \begin{align*}
-                        &2x+3y=5\\
-                        &x=y=1
-                    \end{align*}
-                \subparagraph{Soluzione omogenea}
-                    \begin{align*}
-                        &2x+3y=0\\
-                        &x=-\frac{3}{2}y
-                    \end{align*}
-                \subparagraph{Soluzione generale}Definiamo s parametro nel ruolo di y.
-                    \begin{align*}
-                        &x=1+(-\frac{3}{2})s\\
-                        &y=1+s
-                    \end{align*}
-        \subsection{Trovare soluzioni comuni}
-            \paragraph{}Per trovare soluzioni comuni di E è necessario semplificare.
-            Le 3 operazioni utili per semplificare sono:
+            \begin{center}
+                $a_{ij},b_i\in\Re$\\
+                $n,m > 0$\\
+            \end{center}
+                \subsection{Sistema omogeneo}   
+                    \paragraph{}Il sistema (E) è \textbf{omogeneo} se $b_1=b_2=$\dots$=b_n=0$ 
+                    $$\begin{cases}
+                        a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m=0\\
+                        a_{12}x_1+a_{22}x_2+\dots+a_{2m}x_m=0\\
+                        \vdots\\
+                        a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m=0
+                    \end{cases}$$
+                \subsection{Sistema omogeneo associato}
+                    \paragraph{}Un sistema omogeneo associato è un sistema dove la parte prima parte è uguale
+                    ad un altro e i coefficienti dopo l'uguale sono \textbf{0}.
+                \subsection{Soluzione di un sistema}
+                    \paragraph{}\textbf{Soluzione di un sistema = soluzione di un caso particolare + soluzione dell'omogenea associata}.
+                    \paragraph{Esempio} $2x+3y=5$, $n=1, m=2$
+                        \subparagraph{Soluzione particolare}
+                            \begin{align*}
+                                &2x+3y=5\\
+                                &x=y=1
+                            \end{align*}
+                        \subparagraph{Soluzione omogenea}
+                            \begin{align*}
+                                &2x+3y=0\\
+                                &x=-\frac{3}{2}y
+                            \end{align*}
+                        \subparagraph{Soluzione generale}Definiamo s parametro nel ruolo di y.
+                            \begin{align*}
+                                &x=1+(-\frac{3}{2})s\\
+                                &y=1+s
+                            \end{align*}
+                \subsection{Trovare soluzioni comuni}
+                    \paragraph{}Per trovare soluzioni comuni di E è necessario semplificare.
+                    Le 3 operazioni utili per semplificare sono:
+                            \begin{itemize}
+                                \item Moltiplicare un'equazione $E_i$ per una costante. $\lambda \neq 0$. $E_i\Rightarrow\lambda E_i$ 
+                                \item Moltiplicare un'equazione $E_i$ per $\lambda \neq 0$ e fare la somma con $E_j$.\\ $Ej\Rightarrow E_j+\lambda E_i$. 
+                                \item Scambiare due equazioni.
+                            \end{itemize}
+        \chapter{Matrici}
+            \paragraph{}Per semplificare inseriamo i coefficienti delle equazioni in una \textbf{matrice $n\cdot m$}.
+            $$
+            \begin{bmatrix}
+                a_{11} & a_{12} & \dots & a_{1m}\\
+                a_{21} & a_{22} & \dots & a_{2m}\\
+                \vdots\\
+                a_{n1} & a_{n2} & \dots & a_{nm}
+            \end{bmatrix}
+            $$
+            \subsection{Operazioni}
+                Le operazioni che potevamo usare per semplificare il sistema possiamo utilizzarle anche sulle matrici:
                     \begin{itemize}
-                        \item Moltiplicare un'equazione $E_i$ per una costante. $\lambda \neq 0$. $E_i\Rightarrow\lambda E_i$ 
-                        \item Moltiplicare un'equazione $E_i$ per $\lambda \neq 0$ e fare la somma con $E_j$.\\ $Ej\Rightarrow E_j+\lambda E_i$. 
-                        \item Scambiare due equazioni.
+                        \item Moltiplicare una riga per $\lambda \neq 0$. $R_i \Rightarrow \lambda \cdot R_i$.
+                        \item Sostituire la riga $R_j$ con una somma. $R_j \Rightarrow R_j + \lambda \cdot R_i$.
+                        \item Scambiare due righe.
                     \end{itemize}
-    
+            \section{Matrice a scalini}
+                \paragraph{}Una matrice $n \cdot m$  è detta a \textbf{a scalini} se:
+                    \begin{enumerate}
+                        \item Le righe sono \textbf{in fondo}.
+                        \item Il primo elemento di ogni riga, se esiste, è \textbf{a destra} del primo elemento $\neq 0$ della riga precedente. Un tale elemento è detti \textbf{Pivot}.
+                    \end{enumerate}
+                        \begin{center}
+                        $
+                        \begin{bmatrix}
+                            1 & 1 & 1\\
+                            1 & 0 & 0\\
+                            0 & 0 & 1
+                        \end{bmatrix}
+                        NO
+                        $
+                        $
+                        \begin{bmatrix}
+                            1 & 1 & 1\\
+                            0 & 1 & 1\\
+                            0 & 0 & 1
+                        \end{bmatrix}
+                        $
+                        SI
+                        $
+                        \begin{bmatrix}
+                            0 & 1 & 1\\
+                            1 & 1 & 0\\
+                            0 & 0 & 1
+                        \end{bmatrix}
+                        $
+                        NO
+                    \end{center}
+            \section{Algoritmo di Gauss}
+                \begin{enumerate}
+                    \item Se la matrice è gia in forma a \textbf{scalini} si termina. \textbf{END}.
+                    \item Si cerca il primo elemento $\neq 0$ della prima colonna $\neq 0$.
+                    \item Scambiando le righe possiamo supporre che questo elemento è il \textbf{pivot} della prima riga. Lo segniamo con \textit{p}. 
+                    \item Se siamo in forma a scalini si \textbf{termina}. \textbf{END}.
+                    \item Si annullano tutti gli elementi della colonna di \textit{p} con operazioni di tipo $R_j \Rightarrow R_j + \lambda \cdot R_i$.
+                    \item Se siamo in forma a scalini si \textbf{termina}. \textbf{END}.
+                    \item Si ricomincia con la matrice ottenuta \textbf{escludendo} la prima riga.
+                \end{enumerate}
+                \subparagraph{Esempio}
+                $$
+                \begin{bmatrix}
+                    \textcolor{orange}{1} & -1 & 0 & 3\\
+                    3 & -1 & 1 & 10\\
+                    1 & 5 & 2 & 1
+                \end{bmatrix}
+                $$
+                \paragraph{}Il \textbf{pivot} della prima riga è 1, ora devo annullare tutti gli elementi della colonna del pivot.
+                $$
+                    \xrightarrow[]{R_2-3R_1}                    
+                    \begin{bmatrix}
+                        \textcolor{orange}{1} & -1 & 0 & 3\\
+                        \textcolor{blue}{0} & 2 & 1 & 1\\
+                        1 & 5 & 2 & 1
+                    \end{bmatrix}
+                    \xrightarrow[]{R_3-R_1}                    
+                    \begin{bmatrix}
+                        \textcolor{orange}{1} & -1 & 0 & 3\\
+                        \textcolor{blue}{0} & 2 & 1 & 1\\
+                        \textcolor{blue}{0} & 6 & 2 & -2
+                    \end{bmatrix}
+                $$
+                La prima riga è \textbf{completata}, si ripete l'algoritmo escludendola.
+                $$
+                    \begin{bmatrix}
+                        \textcolor{orange}{1} & -1 & 0 & 3\\
+                        \hline
+                        \textcolor{blue}{0} & \textcolor{orange}{2} & 1 & 1\\
+                        \textcolor{blue}{0} & 6 & 2 & -2
+                    \end{bmatrix}
+                $$
+                Nella seconda riga il \textbf{pivot} è 2, si procede annullando le colonne sotto il pivot.
+                $$
+                    \xrightarrow[]{R_3-R_1}
+                    \begin{bmatrix}
+                        \textcolor{orange}{1} & -1 & 0 & 3\\
+                        \hline
+                        \textcolor{blue}{0} & \textcolor{orange}{2} & 1 & 1\\
+                        \textcolor{blue}{0} & 6 & 2 & -2
+                    \end{bmatrix}
+                    \xrightarrow[]{R_3-3R_2}
+                    \begin{bmatrix}
+                        \textcolor{orange}{1} & -1 & 0 & 3\\
+                        \hline
+                        \textcolor{blue}{0} & \textcolor{orange}{2} & 1 & 1\\
+                        \textcolor{blue}{0} & \textcolor{blue}{0} & -1 & 5
+                    \end{bmatrix}
+                $$
+                La seconda riga è \textbf{completata}, si ripete l'algoritmo escludendola.
+                $$
+                \begin{bmatrix}
+                    \textcolor{orange}{1} & -1 & 0 & 3\\
+                    \textcolor{blue}{0} & \textcolor{orange}{2} & 1 & 1\\
+                    \hline
+                    \textcolor{blue}{0} & \textcolor{blue}{0} & \textcolor{orange}{-1} & 5
+                \end{bmatrix}
+                $$
+                L'algoritmo termina poiché -1 è un \textbf{pivot} e non ci sono colonne da annullare.
+                \subparagraph{Conclusioni}La matrice ritrasformata in sistema di equazioni è la seguente:
+                $$
+                \begin{cases}
+                    x_1-x_2+3x_4=0\\
+                    2x_2+x_3+x_4=0\\
+                    -x_3-5x_4=0
+                \end{cases}
+                $$
+                La \textbf{colonna di $x_4$} è senza \textbf{pivot} quindi \textbf{$x_4$} è detta \textbf{variabile libera}, e può assumere qualsiasi
+                valore nel sistema.
+                Sostituiamo la \textbf{variabile libera} $x_4$ con il parametro \textit{t}.
+                $$
+                \begin{cases}
+                    x_1-x_2+3t=0\\
+                    2x_2+x_3+t=0\\
+                    -x_3-5t=0
+                \end{cases}
+                \begin{cases}
+                    x_1-x_2+3t=0\\
+                    2x_2+x_3+t=0\\
+                    x_3=-5t
+                \end{cases}
+                \begin{cases}
+                    x_1-x_2+3t=0\\
+                    2x_2-5t+t=0\\
+                    x_3=-5t
+                \end{cases}
+                $$
+                $$
+                \begin{cases}
+                    x_1-x_2+3t=0\\
+                    x_2=2t\\
+                    x_3=-5t
+                \end{cases}
+                \begin{cases}
+                    x_1-2t+3t=0\\
+                    x_2=2t\\
+                    x_3=-5t
+                \end{cases}
+                \begin{cases}
+                    x_1=-t\\
+                    x_2=2t\\
+                    x_3=-5t
+                \end{cases}
+                $$ 
+            L'equazione ha \textbf{infinite soluzioni} che possono essere parametrizzate in \textit{t}.
+            \subsection{Casi possibili}
+            \paragraph{}Se nella forma a scalini:
+                \begin{enumerate}
+                    \item \textbf{Ogni colonna} "non aggiunta" \textbf{ha un pivot} $\Leftrightarrow \exists$ \textbf{unica soluzione}
+                    \item C'è un \textbf{pivot nell'ultima colonna} $\Leftrightarrow \nexists$ \textbf{soluzione}
+                    \item C'è una \textbf{colonna "non aggiunta" senza pivot} e l'ultima colonna non ne ha $\Leftrightarrow \exists \; \infty$ \textbf{soluzioni} 
+                \end{enumerate}
+            \paragraph{}
 \end{document}
