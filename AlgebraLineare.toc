@@ -30,4 +30,10 @@
 \contentsline {subparagraph}{Conclusioni}{7}{}%
 \contentsline {subsection}{\numberline {1.2.1}Casi possibili}{7}{}%
 \contentsline {paragraph}{}{7}{}%
-\contentsline {paragraph}{}{7}{}%
+\contentsline {section}{\numberline {1.3}Matrice ridotta a scalini}{8}{}%
+\contentsline {paragraph}{}{8}{}%
+\contentsline {subparagraph}{Esempi}{8}{}%
+\contentsline {section}{\numberline {1.4}Algoritmo di Gauss-Jordan}{8}{}%
+\contentsline {paragraph}{}{8}{}%
+\contentsline {subparagraph}{Esempio}{8}{}%
+\contentsline {subparagraph}{Conclusioni}{9}{}%

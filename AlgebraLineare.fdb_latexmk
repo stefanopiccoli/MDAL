@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1643317036 "c:/Users/Stefano/Desktop/UNIVERSITÁ/MDAL/AlgebraLineare.tex" "AlgebraLineare.pdf" "AlgebraLineare" 1643317037
-  "AlgebraLineare.aux" 1643317036 3026 9ca9c45ce22558c3dad00f288b33a79f "pdflatex"
-  "AlgebraLineare.tex" 1643317035 13076 a549824dbaa6506596033408b892383f ""
-  "AlgebraLineare.toc" 1643317036 1605 4ef4b15e55971d023af7a35cc929fd50 "pdflatex"
+["pdflatex"] 1643738213 "c:/Users/Stefano/Desktop/UNIVERSITÁ/MDAL/AlgebraLineare.tex" "AlgebraLineare.pdf" "AlgebraLineare" 1643738215
+  "AlgebraLineare.aux" 1643738215 3590 d60920dc35c7c8507d3c1824e6b2f802 "pdflatex"
+  "AlgebraLineare.tex" 1643738213 18843 591de2b6ec5700fe7963d039579b3196 ""
+  "AlgebraLineare.toc" 1643738215 1922 786ec64dc202a64fbd930d74868f587e "pdflatex"
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001771820 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993058908 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -55,6 +55,7 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/babel-italian/italian.ldf" 1590249716 11706 c338c4a47651f95dee3fc5c3dbc21081 ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/base/report.cls" 1638775084 23203 8fbc410e29d3fd675970d5f9698c9c11 ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/base/size12.clo" 1638775084 8449 bc7344e882df4d7e51c046514dee83e4 ""
+  "C:/Program Files/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty" 1561036220 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1622999586 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty" 1601894156 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg" 1465890692 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
@@ -68,7 +69,7 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1636284872 56029 3f7889dab51d620aa43177c391b7b190 ""
   "C:/Users/Stefano/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map" 1638977420 330337 f752d5b5e6776e1c6d2af00aa9101197 ""
   "C:/Users/Stefano/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1638977808 10436033 0330707afcf1f7a30301f6a72adad0ac ""
-  "c:/Users/Stefano/Desktop/UNIVERSITÁ/MDAL/AlgebraLineare.tex" 1643317035 13076 a549824dbaa6506596033408b892383f ""
+  "c:/Users/Stefano/Desktop/UNIVERSITÁ/MDAL/AlgebraLineare.tex" 1643738213 18843 591de2b6ec5700fe7963d039579b3196 ""
   (generated)
   "AlgebraLineare.aux"
   "AlgebraLineare.log"

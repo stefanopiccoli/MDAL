@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 \usepackage{xcolor}
+\usepackage{enumitem}
 
 \begin{document}
 \title{
@@ -89,11 +90,11 @@
                 \subsection{Trovare soluzioni comuni}
                     \paragraph{}Per trovare soluzioni comuni di E è necessario semplificare.
                     Le 3 operazioni utili per semplificare sono:
-                            \begin{itemize}
+                            \begin{enumerate}[label=\Alph*)]
                                 \item Moltiplicare un'equazione $E_i$ per una costante. $\lambda \neq 0$. $E_i\Rightarrow\lambda E_i$ 
                                 \item Moltiplicare un'equazione $E_i$ per $\lambda \neq 0$ e fare la somma con $E_j$.\\ $Ej\Rightarrow E_j+\lambda E_i$. 
                                 \item Scambiare due equazioni.
-                            \end{itemize}
+                            \end{enumerate}
         \chapter{Matrici}
             \paragraph{}Per semplificare inseriamo i coefficienti delle equazioni in una \textbf{matrice $n\cdot m$}.
             $$
@@ -106,11 +107,11 @@
             $$
             \subsection{Operazioni}
                 Le operazioni che potevamo usare per semplificare il sistema possiamo utilizzarle anche sulle matrici:
-                    \begin{itemize}
+                    \begin{enumerate}[label=\Alph*)]
                         \item Moltiplicare una riga per $\lambda \neq 0$. $R_i \Rightarrow \lambda \cdot R_i$.
                         \item Sostituire la riga $R_j$ con una somma. $R_j \Rightarrow R_j + \lambda \cdot R_i$.
                         \item Scambiare due righe.
-                    \end{itemize}
+                    \end{enumerate}
             \section{Matrice a scalini}
                 \paragraph{}Una matrice $n \cdot m$  è detta a \textbf{a scalini} se:
                     \begin{enumerate}
@@ -265,5 +266,111 @@
                     \item C'è un \textbf{pivot nell'ultima colonna} $\Leftrightarrow \nexists$ \textbf{soluzione}
                     \item C'è una \textbf{colonna "non aggiunta" senza pivot} e l'ultima colonna non ne ha $\Leftrightarrow \exists \; \infty$ \textbf{soluzioni} 
                 \end{enumerate}
-            \paragraph{}
+        \clearpage
+        \section{Matrice ridotta a scalini}
+            \paragraph{}Una matrice è in forma \textbf{ridotta} a scalini se:
+                \begin{itemize}
+                    \item È in forma \textbf{a scalini}
+                    \item Ogni \textbf{pivot} è = 1
+                    \item Ogni \textbf{pivot} è l'unico elemento $\neq 0$ nella sua colonna
+                \end{itemize}
+                \subparagraph{Esempi}
+                $$
+                \begin{bmatrix}
+                    \textcolor{blue}{1} & 2 & 0 & 0\\
+                    0 & 0 & \textcolor{blue}1 & 0\\
+                    0 & 0 & 0 & \textcolor{blue}{1}
+                \end{bmatrix}
+                \text{SI }
+                \begin{bmatrix}
+                    \textcolor{blue}{1} & 2 & \textcolor{orange}{3} & \textcolor{orange}{4}\\
+                    0 & 0 & \textcolor{blue}{1} & \textcolor{orange}{2}\\
+                    0 & 0 & 0 & \textcolor{blue}{1}
+                \end{bmatrix}
+                \text{NO (A scalini ma non ridotta)}
+                $$
+        \section{Algoritmo di Gauss-Jordan}
+            \paragraph{}L'algoritmo produce una matrice in forma \textbf{ridotta} a scalini attraverso operazioni
+            del tipo A, B, C.
+                \begin{enumerate}
+                    \item Con l'\textbf{algoritmo di Gauss} si riduce a scalini la matrice.
+                    \item Nelle colonne dei pivot gli elementi della colonna superiore e a sinistra nella riga sono già = 0.
+                    \textbf{Annullare} gli elementi sopra il pivot nella colonna con \textbf{operazioni del tipo B} ($R_j \Rightarrow R_j + \lambda \cdot R_i$).
+                    \item In ogni riga si \textbf{cerca il pivot} (se esiste). Se il pivot $\lambda \neq 1$, si moltiplica la riga per $\frac{1}{\lambda}$.
+                \end{enumerate}
+                \subparagraph{Esempio}Partiamo da una matrice già ridotta a scalini dall'algoritmo di Gauss.
+                    $$
+                    \begin{bmatrix}
+                        2 & 1 & -1 & \vline & -1\\
+                        3 & 2 & -1 & \vline & 0\\
+                        4 & -3 & 1 & \vline & -1\\
+                        5 & -2 & 2 & \vline & 2
+                    \end{bmatrix}
+                    \xrightarrow[]{\text{Algoritmo di Gauss}}
+                    \begin{bmatrix}
+                        \textcolor{blue}{2} & 1 & -1 & \vline & -1\\
+                        0 & \textcolor{blue}{1} & 1 & \vline & 3\\
+                        0 & 0 & \textcolor{blue}{1} & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    $$ 
+                    Ora applichiamo l'\textbf{algoritmo di Gauss-Jordan} alla matrice a scalini per trasformarla in matrice \textbf{ridotta} a scalini.
+                    $$
+                    \begin{bmatrix}
+                        \textcolor{blue}{2} & 1 & -1 & \vline & -1\\
+                        0 & \textcolor{blue}{1} & 1 & \vline & 3\\
+                        0 & 0 & \textcolor{blue}{1} & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    $$
+                    Si \textbf{azzerano} gli elementi nelle colonne dei pivot che sono $\neq$ 0.
+                    $$
+                    \begin{bmatrix}
+                        2 & \textcolor{orange}{1} & \textcolor{orange}{-1} & \vline & -1\\
+                        0 & 1 & \textcolor{orange}{1} & \vline & 3\\
+                        0 & 0 & 1 & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    \xrightarrow[]{R_1-R_2}
+                    \begin{bmatrix}
+                        2 & \textcolor{blue}{0} & \textcolor{orange}{-2} & \vline & -4\\
+                        0 & 1 & \textcolor{orange}{1} & \vline & 3\\
+                        0 & 0 & 1 & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    \xrightarrow[R_2-R_3]{R_1+2R_3}
+                    \begin{bmatrix}
+                        2 & \textcolor{blue}{0} & \textcolor{blue}{0} & \vline & 0\\
+                        0 & 1 & \textcolor{blue}{0} & \vline & 1\\
+                        0 & 0 & 1 & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    $$
+                    Ora nelle colonne dei pivot \textbf{tutti gli elementi sono = 0} eccetto il pivot.
+                    Si individuano i \textbf{pivot} $\neq 1$ e si procede con la loro \textbf{trasformazione a 1}.
+                    Si moltiplicano le righe con i \textbf{pivot} $\neq$ 1 per il loro \textbf{reciproco}.
+                    $$
+                    \begin{bmatrix}
+                        \textcolor{orange}{2} & 0 & 0 & \vline & 0\\
+                        0 & 1 & 0 & \vline & 1\\
+                        0 & 0 & 1 & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    \xrightarrow[]{R_1\rightarrow \frac{1}{2}R_1}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & 0 & 0 & \vline & 0\\
+                        0 & 1 & 0 & \vline & 1\\
+                        0 & 0 & 1 & \vline & 2\\
+                        0 & 0 & 0 & \vline & 0
+                    \end{bmatrix}
+                    $$
+                \subparagraph{Conclusioni}
+                $$
+                \begin{cases}
+                x_1=0\\
+                x_2=1\\
+                x_3=2  
+                \end{cases}
+                $$
+                %35:00
 \end{document}
