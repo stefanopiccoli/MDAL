@@ -1,10 +1,18 @@
+%PREAMBOLO
 \documentclass[a4paper, 12pt]{report}
 \usepackage[italian]{babel}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
+\usepackage{amsbsy}
 \usepackage{xcolor}
 \usepackage{enumitem}
-
+\usepackage{multicol}
+\renewcommand{\footnoterule}{
+  \kern -3pt
+  \hrule width \textwidth height 1pt
+  \kern 2pt
+}%ALLUNGA LINEA PIE DI PAGINA
+%INIZIO
 \begin{document}
 \title{
 \textbf{Algebra Lineare}}
@@ -372,5 +380,103 @@
                 x_3=2  
                 \end{cases}
                 $$
-                %35:00
+    \chapter{Spazi vettoriali}
+        \paragraph{}Si parla di \textbf{spazi vettoriali} quando definiamo punti e vettori
+        nel piano $\mathbb{R}^2$. Un \textbf{punto} di $\mathbb{R}^2$ si può descrivere con \textbf{due coordinate}
+        $(x_1,x_2)$, ma anche con un \textbf{vettore} (una freccia) dall'\textbf{origine} $(0,0)$ a $(x_1,x_2)$ 
+            \subsection{Somma}
+            \paragraph{}Si può fare la \textbf{somma} di due vettori:
+                \begin{itemize}
+                    \item Sulle \textbf{coordinate}: $(x_1,x_2)+(x'_1+x'_2):=(x_1+x'_1,x_2+x'_2)$
+                    \item \textbf{Geometricamente}: \textbf{Legge del parallelogramma} dove la \textbf{diagonale del parallelogramma} è la somma dei due vettori.
+                \end{itemize}
+            \subsection{Moltiplicazione}
+            \paragraph{}Un vettore può essere moltiplicato con uno scalare $\lambda \in \mathbb{R}$.
+            \begin{itemize}
+                \item Sulle \textbf{coordinate}: $\lambda (x_1,x_2):=(\lambda x_1,\lambda x_2)$
+                \item \textbf{Geometricamente}: La \textbf{lunghezza} è moltiplicata da $\lambda$ ma l'angolo non cambia.
+            \end{itemize}
+        \clearpage
+        \section{Spazi vettoriali di dimensione n}
+            \paragraph{}Si definisce $\mathbb{R}^n:= \left \{
+            \begin{bmatrix}
+            x_1\\
+            x_2\\
+            \vdots\\
+            x_n    
+            \end{bmatrix}
+            : x_i \in \mathbb{R}
+            \right \}
+            $
+            uno \textbf{spazio n-dim standard} o spazio dei vettori colonna.\\
+            Un spazio vettoriale di dimensione \textbf{2} corrisponde ad un \textbf{piano}, di dimensione \textbf{3} ad uno
+            spazio \textbf{euclideiano}.
+            \paragraph{Definizione} Uno \textbf{spazio vettoriale} su $\mathbb{R}$ è un insieme V che ammette due tipi di operazioni:
+                \begin{itemize}
+                    \item \textbf{Somma}: $v_1,v_2 \in V \rightarrow v_1+v_2 \in V$.
+                    \item \textbf{Prodotto} con $\lambda \in \mathbb{R}$ : $v \in V \rightarrow \lambda \cdot v \in V$. 
+                \end{itemize}
+            Le operazioni devono soddisfare:
+                \begin{multicols}{2}
+                \begin{enumerate}              
+                    \item $(v_1+v_2)+v_3 = v_1+(v_2+v_3)$
+                    \item $v_1+v_2 = v_2+v_1$
+                    \item \footnote{$\exists !$= Esiste un unico}$\exists ! 0 \in V: 0+v=v+0=v \; \forall v$
+                    \item $\forall v \; \exists ! -v \in V: v+(-v)=(-v)+v=0$
+                    \columnbreak
+                    \item $(\lambda_1+\lambda_2)\cdot v = \lambda_1 \cdot v +\lambda_2 \cdot v$
+                    \item $\lambda \cdot(v_1+v_2)=\lambda \cdot v_1+\lambda \cdot v_2$
+                    \item $(\lambda_1 \cdot \lambda_2)\cdot v = \lambda_1 \cdot(\lambda_2 \cdot v)$
+                    \item $1 \cdot v = v$
+                \end{enumerate}
+                \end{multicols}
+            \subsection{Somma}
+                $$
+                \begin{bmatrix}
+                    x_1\\
+                    x_2\\
+                    \vdots\\
+                    x_n    
+                \end{bmatrix}
+                +
+                \begin{bmatrix}
+                    x'_1\\
+                    x'_2\\
+                    \vdots\\
+                    x'_n    
+                \end{bmatrix}
+                :=
+                \begin{bmatrix}
+                    x_1+x'_1\\
+                    x_2+x'_2\\
+                    \vdots\\
+                    x_n+x'_n    
+                \end{bmatrix}
+                $$
+            \subsection{Moltiplicazione}
+                $$
+                \lambda \cdot
+                \begin{bmatrix}
+                    x_1\\
+                    x_2\\
+                    \vdots\\
+                    x_n    
+                \end{bmatrix}
+                := 
+                \begin{bmatrix}
+                    \lambda \cdot x_1\\
+                    \lambda \cdot x_2\\
+                    \vdots\\
+                    \lambda \cdot x_n    
+                \end{bmatrix}
+                \lambda \in \mathbb{R}.
+                $$
+            \section{Sottospazi vettoriali}
+                \paragraph{}Sia V uno spazio vettoriale. Un \textbf{sottospazio} $W \subset V$ è
+                un sottoinsieme tale che
+                    \begin{itemize}
+                        \item Dati due vettori nel sottospazio, la loro somma sarà nel sottospazio. $$v_1,v_2 \in W \Rightarrow v_1+v_2 \in W$$
+                        \item Dato un vettore nel sottospazio, il prodotto con un qualsiasi scalare è contenuto nel sottospazio. $$v \in W \Rightarrow \lambda v \in W \; \forall \lambda$$
+                    \end{itemize} 
+                Un sottospazio $\boldsymbol{W \subset V}$ \textbf{è uno spazio vettoriale}.
 \end{document}
