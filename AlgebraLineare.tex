@@ -103,7 +103,7 @@
                                 \item Moltiplicare un'equazione $E_i$ per $\lambda \neq 0$ e fare la somma con $E_j$.\\ $Ej\Rightarrow E_j+\lambda E_i$. 
                                 \item Scambiare due equazioni.
                             \end{enumerate}
-        \chapter{Matrici}
+    \chapter{Matrici}
             \paragraph{}Per semplificare inseriamo i coefficienti delle equazioni in una \textbf{matrice $n\cdot m$}.
             $$
             \begin{bmatrix}
@@ -479,4 +479,181 @@
                         \item Dato un vettore nel sottospazio, il prodotto con un qualsiasi scalare è contenuto nel sottospazio. $$v \in W \Rightarrow \lambda v \in W \; \forall \lambda$$
                     \end{itemize} 
                 Un sottospazio $\boldsymbol{W \subset V}$ \textbf{è uno spazio vettoriale}.
+                \subparagraph{Esempio}
+                    \begin{enumerate}
+                        \item $ \left \{
+                                \begin{bmatrix}
+                                t_1\\
+                                t_2
+                                \end{bmatrix}
+                                \in \mathbb{R}^2 : t_1+t_2=0
+                                \right \}\subset \mathbb{R}^2
+                                $ 
+                                è un sottospazio.\\[2pt]
+                                In generale
+                                $$ \left \{
+                                \begin{bmatrix}
+                                t_1\\
+                                t_2\\
+                                \vdots\\
+                                t_m
+                                \end{bmatrix}
+                                \in \mathbb{R}^m : 
+                                \begin{cases}
+                                    a_{11}t_1+a_{12}t_2+\dots+a_{1m}t_m=0\\
+                                    a_{21}t_1+a_{22}t_2+\dots+a_{2m}t_m=0\\
+                                    \vdots\\
+                                    a_{n1}t_1+a_{n2}t_2+\dots+a_{nm}t_m=0
+                                \end{cases}
+                                \right \}\subset \mathbb{R}^m
+                                $$
+                                è \textbf{sottospazio}.\\
+                                Quindi le \textbf{soluzioni} di un \textbf{sistema di equazioni lineari omogenei} a n
+                                variabili definiscono un \textbf{sottospazio} di $\mathbb{R}^m$.\\
+                                \textbf{Non definiscono un sottospazio} di $\mathbb{R}^m$ le soluzioni di equazioni lineari \textbf{non omogenee} (coefficiente $\neq 0$).
+                    \end{enumerate}
+    \chapter{Combinazioni lineari}
+                \paragraph{}Sia V uno spazio vettoriale, $v_1,v_2,\dots,v_m \in V$.
+                Una \textbf{combinazione lineare} di $v_1,\dots,v_m$ è una somma $\boldsymbol{\lambda_1 v_1+\lambda_2 v_2+\dots+\lambda_m v_m \in V}$, dove $\lambda_1,\lambda_2,\dots,\lambda_m \in \mathbb{R}$.\\
+                La combinazione lineare è detta \textbf{banale} se $\lambda_1=\dots=\lambda_m=0$.
+                \subparagraph{Esempio}
+                    $$
+                    V=\mathbb{R}^2,\;v_1=
+                    \begin{bmatrix}
+                        1\\
+                        1
+                    \end{bmatrix}
+                    ,\;v_2=
+                    \begin{bmatrix}
+                        2\\
+                        2
+                    \end{bmatrix}
+                    $$
+                    \subparagraph{}Allora $-2v_1+1v_2=0$ è \textbf{combinazione lineare non banale}.
+        \section{Span}
+            \paragraph{}Siano $v_1,\dots,v_m \in V \;m$ vettori. Il \textbf{sottospazio generato} da $v_1,\dots,v_m$ è:
+            $$
+                Span(v_1,v_2,...,v_m):= \left \{\lambda_1v_1+\lambda_2v_2+\dots+\lambda_mv_m\;:\;\lambda_1,\dots,\lambda_m \in \mathbb{R}\right\}
+            $$   
+            Quindi \textit{Span} è l'insieme di \textbf{tutte le combinazioni lineari}.\\
+            $Span(v_1,v_2,\dots,v_m) \subset V$ è un \textbf{sottospazio}.     
+                \subparagraph{Esempi}
+                \begin{enumerate}
+                    \item 
+                        $$
+                        \mathbb{R}^2 = Span \left\{
+                            \begin{bmatrix}
+                                0\\
+                                1
+                            \end{bmatrix}
+                            ,
+                            \begin{bmatrix}
+                                1\\
+                                0
+                            \end{bmatrix}
+                            \right\}
+                        $$ 
+                        $
+                        Span \left\{
+                        \begin{bmatrix}
+                            0\\
+                            1
+                        \end{bmatrix}
+                        \right\},Span
+                        \left\{
+                        \begin{bmatrix}
+                            1\\
+                            0
+                        \end{bmatrix}
+                        \right\} \subset \mathbb{R}^2
+                        $    
+                        sono due rette, rispettivamente dell'asse x e y.
+                    \item 
+                        $$
+                        W := \left\{
+                            \begin{bmatrix}
+                                t_1\\
+                                t_2\\
+                                t_3
+                            \end{bmatrix}
+                            \in \mathbb{R}^3 : t_1=0 \right\}
+                        $$
+                        Allora
+                        $
+                        W=Span \left\{
+                            \begin{bmatrix}
+                                0\\
+                                1\\
+                                0
+                            \end{bmatrix}
+                            ,
+                            \begin{bmatrix}
+                                0\\
+                                0\\
+                                1
+                            \end{bmatrix}
+                            \right\}=Span \left\{
+                                \begin{bmatrix}
+                                    0\\
+                                    1\\
+                                    1
+                                \end{bmatrix}
+                                ,
+                                \begin{bmatrix}
+                                    0\\
+                                    0\\
+                                    -1
+                                \end{bmatrix}
+                                \right\}
+                        $. Quindi un \textbf{sottospazio} può essere lo \textbf{span di vettori diversi}.
+                \end{enumerate}
+        \section{Dipendenza lineare}
+            \paragraph{}I vettori $v_1,v_2,\dots,v_m \in V$ sono \textbf{linearmente indipendenti} se
+            $$\lambda v_1+\lambda_2 v_2+\dots+\lambda_m V_m = 0$$ vale \textbf{solo} per $\lambda_1=\dots=\lambda_m=0$.
+            Altrimenti sono \textbf{linearmente dipendenti}.
+            \paragraph{Geometricamente} Vettori linearmente dipendenti hanno la \textbf{stessa retta}.
+            \paragraph{Proposizione} $v_1,v_2,\dots,v_m$ sono \textbf{linearmente dipendenti} $\Leftrightarrow \exists i : v_i$ è combinazione lineare dei $v_j\; \forall j\neq i$.
+            \paragraph{Verificare se m vettori sono linearmente indipendenti}
+                $$
+                v_1=
+                \begin{bmatrix}
+                    a_{11}\\
+                    a_{21}\\
+                    \vdots\\
+                    a_{n1}       
+                \end{bmatrix}
+                ,v_2=
+                \begin{bmatrix}
+                    a_{12}\\
+                    a_{22}\\
+                    \vdots\\
+                    a_{n2} 
+                \end{bmatrix}
+                ,\dots,\;
+                v_m=
+                \begin{bmatrix}
+                    a_{1m}\\
+                    a_{2m}\\
+                    \vdots\\
+                    a_{nm} 
+                \end{bmatrix}
+                $$
+                L'equazione $\lambda_1v_1+\lambda_2v_2+\dots+\lambda_mv_m=0$ \textbf{vale se e solo se} $(\lambda_1,\dots,\lambda_m)$ \textbf{è soluzione del sistema}
+                $$
+                    \begin{cases}
+                        a_{11}x_1+a_{12}x_2+\dots+a_{1m}x_m = 0\\
+                        a_{21}x_1+a_{22}x_2+\dots+a_{1m}x_m = 0\\
+                        \vdots\\
+                        a_{n1}x_1+a_{n2}x_2+\dots+a_{nm}x_m = 0
+                    \end{cases}
+                $$               
+                dove \textbf{x sostituisce} $\boldsymbol{\lambda}$ e lo 0 dell'equazione corrisponde al vettore
+                $
+                \begin{bmatrix}
+                    0\\
+                    \vdots\\
+                    0
+                \end{bmatrix}
+                $.\\
+                Quindi $v_1,\dots,v_m$ sono \textbf{linearmente indipendenti} $\Leftrightarrow$ il sistema ammette \textbf{solo la soluzione banale}, cioè $x=(0,\dots,0)$.
 \end{document}
