@@ -605,8 +605,108 @@
                                     -1
                                 \end{bmatrix}
                                 \right\}
-                        $. Quindi un \textbf{sottospazio} può essere lo \textbf{span di vettori diversi}.
+                        $.\\
+                        Quindi un \textbf{sottospazio} può essere lo \textbf{span di vettori diversi}.
                 \end{enumerate}
+                \paragraph{Verificare che $\boldsymbol{Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb{R}^3}$}
+                    $$
+                    v_1=
+                    \begin{bmatrix}
+                        1\\
+                        2\\
+                        3\\
+                    \end{bmatrix},
+                    v_2=
+                    \begin{bmatrix}
+                        1\\
+                        0\\
+                        1
+                    \end{bmatrix},
+                    v_3=
+                    \begin{bmatrix}
+                        0\\
+                        0\\
+                        1
+                    \end{bmatrix},
+                    v_4=
+                    \begin{bmatrix}
+                        2\\
+                        2\\
+                        4
+                    \end{bmatrix}
+                    $$
+                    Se 
+                    $
+                    v=
+                    \begin{bmatrix}
+                        b_1\\
+                        b_2\\
+                        b_3\\
+                    \end{bmatrix}
+                    \in \mathbb{R}^3
+                    $
+                    applicando l'\textbf{Algoritmo di Gauss} si ottiene:
+                    $$
+                    \begin{bmatrix}
+                        1 & 1 & 0 & \vline & b_1\\
+                        2 & 0 & 0 & \vline & b_2\\
+                        3 & 1 & 1 & \vline & b_3
+                    \end{bmatrix}
+                    \xrightarrow[R_3-3R_1]{R_2-2R_1}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & 1 & 0 & \vline & b_1\\
+                        0 & -2 & 0 & \vline & b_2-2b_1\\
+                        0 & -2 & 1 & \vline & b_3-3b_1
+                    \end{bmatrix}
+                    $$
+                    $$
+                    \xrightarrow{R3-R2}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & 1 & 0 & \vline & b_1\\
+                        0 & \textcolor{blue}{-2} & 0 & \vline & b_2-2b_1\\
+                        0 & 0 & \textcolor{blue}{1} & \vline & b_3-b_1-b_2
+                    \end{bmatrix}
+                    $$
+                    3 \textbf{pivots} nelle 3 colonne a sinistra (non ci interessa a destra) quindi
+                    $$
+                    \begin{cases}
+                        x_1+x_2=b_1\\
+                        2x_1=b_2\\
+                        3x_1+x_2+x_3=b_3
+                    \end{cases}
+                    $$
+                    ammette un' \textbf{unica soluzione} $\lambda_1,\lambda_2,\lambda_3$:
+                    $$
+                    \lambda_1
+                    \begin{bmatrix}
+                        1\\
+                        2\\
+                        3
+                    \end{bmatrix}
+                    +\lambda_2
+                    \begin{bmatrix}
+                        1\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    +\lambda_3
+                    \begin{bmatrix}
+                        0\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    =
+                    \begin{bmatrix}
+                        b_1\\
+                        b_2\\
+                        b_3
+                    \end{bmatrix}
+                    \text{.}
+                    $$
+                    Il \textbf{vettore generale} v è contenuto in $Span(v_1,v_2,v_3)$.
+                    \paragraph{In generale} Se $v_1,v_2,\dots,v_n \in V$ sono vettori tali che $v_n$ è \textbf{combinazione lineare}
+                    di $v_1,v_2,\dots,v_{n-1} \Rightarrow Span(v_1,v_1,\dots,v_n)=Span(v_1,v_1,\dots,v_{n-1})$.
+                    
         \section{Dipendenza lineare}
             \paragraph{}I vettori $v_1,v_2,\dots,v_m \in V$ sono \textbf{linearmente indipendenti} se
             $$\lambda v_1+\lambda_2 v_2+\dots+\lambda_m V_m = 0$$ vale \textbf{solo} per $\lambda_1=\dots=\lambda_m=0$.
@@ -656,4 +756,221 @@
                 \end{bmatrix}
                 $.\\
                 Quindi $v_1,\dots,v_m$ sono \textbf{linearmente indipendenti} $\Leftrightarrow$ il sistema ammette \textbf{solo la soluzione banale}, cioè $x=(0,\dots,0)$.
+                \paragraph{Esempio} Verificare che i seguenti vettori di $\mathbb{R}^3$ siano \textbf{linearmente indipendenti}.
+                    $$
+                    v_1=
+                    \begin{bmatrix}
+                        1\\
+                        2\\
+                        3\\
+                    \end{bmatrix},
+                    v_2=
+                    \begin{bmatrix}
+                        1\\
+                        0\\
+                        1
+                    \end{bmatrix},
+                    v_3=
+                    \begin{bmatrix}
+                        0\\
+                        0\\
+                        1
+                    \end{bmatrix},
+                    v_4=
+                    \begin{bmatrix}
+                        2\\
+                        2\\
+                        4
+                    \end{bmatrix}
+                    $$
+                Dobbiamo cercare le soluzioni del sistema \textbf{lineare omogeneo} con la \textbf{matrice dei coefficienti associata}.
+                    $$
+                    \begin{bmatrix}
+                        1 & 1 & 0 & 2\\
+                        2 & 0 & 0 & 2\\
+                        3 & 1 & 1 & 4
+                    \end{bmatrix}
+                    $$
+                \textbf{Algoritmo di Gauss:}
+                    $$
+                    \xrightarrow[R_3-3R_1]{R_2-2R_1}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & 1 & 0 & 2\\
+                        0 & -2 & 0 & -2\\
+                        0 & -2 & 1 & -2
+                    \end{bmatrix}
+                    \xrightarrow{R_3-R_2}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & 1 & 0 & 2\\
+                        0 & \textcolor{blue}{-2} & 0 & -2\\
+                        0 & 0 & \textcolor{blue}{1} & 0
+                    \end{bmatrix}
+                    $$
+                Ci sono 3 \textbf{pivots} e una \textbf{variabile libera} $\Rightarrow \boldsymbol{\infty}$ \textbf{soluzioni}.\\
+                Il sistema ammette \textbf{soluzioni non banali} $\Rightarrow$ i vettori sono \textbf{linearmente dipendenti}.
+        \section{Base}
+            \paragraph{}Un sistema $v_1,\dots,v_n$ di vettori è una \textbf{base} di V se:
+            \begin{itemize}
+                \item i vettori $v_1,\dots,v_n$ sono \textbf{linearmente indipendenti}
+                \item $\boldsymbol{Span(v_1,\dots,v_n) = V}$
+            \end{itemize}
+        %-33
+            \paragraph{Esempio} Base standard di $\mathbb{R}^n$:
+                $$
+                e_1=
+                \begin{bmatrix}
+                    1\\
+                    0\\
+                    \vdots\\
+                    0
+                \end{bmatrix}
+                ,e_2=
+                \begin{bmatrix}
+                    0\\
+                    1\\
+                    \vdots\\
+                    0
+                \end{bmatrix}
+                ,\dots,e_n=
+                \begin{bmatrix}
+                    0\\
+                    0\\
+                    \vdots\\
+                    1
+                \end{bmatrix}
+                $$
+                Si osserva $
+                    \begin{bmatrix}
+                        \lambda_1\\
+                        \lambda_2\\
+                        \vdots\\
+                        \lambda_n\\
+                    \end{bmatrix}
+                = \lambda_1 e_1+\lambda_2 e_2+\dots+\lambda_n e_n.
+                $\\
+                Dunque $Span (e_1,\dots,e_n)=\mathbb{R}^n$ e 
+                $\lambda_1 e_1+\dots+\lambda_n e_n=0$ 
+                se e solo se \\$\lambda_1=\dots=\lambda_n=0$.
+            \subsection{Coordinate}
+                \paragraph{}Sia $v_1,\dots,v_n$ una base di V e $v \in V$ un vettore. 
+                Allora $$\exists! \; \alpha_1,\dots,\alpha_n : v=\alpha_1 v_1+\alpha_2 v_2+\dots+\alpha_n v_n$$
+                ovvero \textbf{ogni vettore} si scrive in un modo \textbf{unico} come \textbf{combinazione lineare} degli \textbf{elementi della base}.\\
+                Gli $\boldsymbol{\alpha_i}$ sono le \textbf{coordinate} di v rispetto alla \textbf{base}.
+                \paragraph{Trovare le coordinate di un vettore rispetto alla base}\mbox{}\\
+                Sappiamo da esercizi precedenti che
+                    $
+                    v_1=
+                    \begin{bmatrix}
+                        1\\
+                        2\\
+                        3
+                    \end{bmatrix}
+                    ,v_2=
+                    \begin{bmatrix}
+                        1\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    ,v_3=
+                    \begin{bmatrix}
+                        0\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    $
+                    sono una \textbf{base} di $\mathbb{R}^3$. Trovare le coordinate di
+                    $
+                    \begin{bmatrix}
+                        0\\
+                        2\\
+                        1
+                    \end{bmatrix}
+                    $ rispetto a questa base.
+                    $$
+                    \alpha_1
+                    \begin{bmatrix}
+                        1\\
+                        2\\
+                        3
+                    \end{bmatrix}
+                    +\alpha_2
+                    \begin{bmatrix}
+                        1\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    +\alpha_3
+                    \begin{bmatrix}
+                        0\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    =
+                    \begin{bmatrix}
+                        0\\
+                        2\\
+                        1
+                    \end{bmatrix}
+                    $$
+                Applichiamo l'\textbf{algoritmo di Gauss-Jordan}.
+                $$
+                \begin{bmatrix}
+                    1 & 1 & 0 & \vline & 0\\
+                    2 & 0 & 0 & \vline & 2\\
+                    3 & 1 & 1 & \vline & 1
+                \end{bmatrix}
+                \xrightarrow[R_3-3R_1]{R_2-2R_1}
+                \begin{bmatrix}
+                    1 & 1 & 0 & \vline & 0\\
+                    0 & -2 & 0 & \vline & 2\\
+                    0 & -2 & 1 & \vline & 1
+                \end{bmatrix}
+                \xrightarrow[R_2\rightarrow \frac{1}{2}R_2]{R_3-R_2}
+                \begin{bmatrix}
+                    1 & 1 & 0 & \vline & 1\\
+                    0 & 1 & 0 & \vline & -1\\
+                    0 & 0 & 1 & \vline & -1
+                \end{bmatrix}
+                $$
+                $$
+                \xrightarrow[]{R_1-R_2}
+                \begin{bmatrix}
+                    1 & 0 & 0 & \vline & 1\\
+                    0 & 1 & 0 & \vline & -1\\
+                    0 & 0 & 1 & \vline & -1
+                \end{bmatrix}
+                $$
+                Quindi 
+                $
+                \begin{cases}
+                    \alpha_1=1\\
+                    \alpha_2=-1\\
+                    \alpha_3=-1
+                \end{cases}
+                \text{e }
+                1
+                \begin{bmatrix}
+                    1\\
+                    2\\
+                    3
+                \end{bmatrix}
+                +-1
+                \begin{bmatrix}
+                    1\\
+                    0\\
+                    1
+                \end{bmatrix}
+                +-1
+                \begin{bmatrix}
+                    0\\
+                    0\\
+                    1
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                    0\\
+                    2\\
+                    1
+                \end{bmatrix}
+                $
 \end{document}
