@@ -608,6 +608,7 @@
                         $.\\
                         Quindi un \textbf{sottospazio} può essere lo \textbf{span di vettori diversi}.
                 \end{enumerate}
+                \subsection{Esercizi}
                 \paragraph{Verificare che $\boldsymbol{Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb{R}^3}$}
                     $$
                     v_1=
@@ -706,7 +707,83 @@
                     Il \textbf{vettore generale} v è contenuto in $Span(v_1,v_2,v_3)$.
                     \paragraph{In generale} Se $v_1,v_2,\dots,v_n \in V$ sono vettori tali che $v_n$ è \textbf{combinazione lineare}
                     di $v_1,v_2,\dots,v_{n-1} \Rightarrow Span(v_1,v_1,\dots,v_n)=Span(v_1,v_1,\dots,v_{n-1})$.
-                    
+                    \paragraph{Trovare sistema di equazioni lineari omogenee tale che il sottospazio di $\boldsymbol{\mathbb{R}^n \text{ associato sia }Span(v_1,\dots,v_m)}$}
+                    \begin{enumerate}
+                        \item Si sceglie una base di $Span(v_1,v_2,\dots,v_m)$. Possiamo supporre la base $(v_1,\dots,v_r) \text{ con }r\leq m $.
+                        \item Siano 
+                            $
+                            v_1=
+                            \begin{bmatrix}
+                                a_{11}\\
+                                \vdots\\
+                                a_{n1}
+                            \end{bmatrix}
+                            ,...,v_r=
+                            \begin{bmatrix}
+                                a_{1r}\\
+                                \vdots\\
+                                a_{nr}
+                            \end{bmatrix}
+                            \Rightarrow
+                            A=
+                            \begin{bmatrix}
+                                a_{11} & \dots & a_{1r}\\
+                                \vdots & \vdots & \vdots\\
+                                a_{n1} & \dots & a_{nr}
+                            \end{bmatrix}
+                            $\\
+                            $v_1,\dots,v_n$ \textbf{linearmente indipendenti} $\Leftrightarrow$ nella forma a scalini di A c'è un \textbf{pivot in ogni colonna}.
+                        \item Sia
+                            $
+                            v=
+                            \begin{bmatrix}
+                                b_1\\
+                                \vdots\\
+                                b_n
+                            \end{bmatrix}
+                            $ qualsiasi.\\
+                            $v \in Span(v_1,...,v_r) \Leftrightarrow \boldsymbol{v},v_1,\dots,v_r$ sono \textbf{linearmente dipendenti} $\Leftrightarrow$\\
+                            nella forma a scalini della matrice 
+                            $
+                            \begin{bmatrix}
+                                a_{11} & \dots & a_{1r} & b_1\\
+                                \vdots & \vdots & \vdots & \vdots\\
+                                a_{n1} & \dots & a_{nr} & b_n
+                            \end{bmatrix}
+                            $
+                            ci sono sempre \textbf{r pivot} nelle prime \textbf{r colonne} ovvero \textbf{l'ultima colonna non contiene pivots}.\\
+                            \textbf{Questo dà equazioni lineari per} $\boldsymbol{b_1,\dots,b_n}$.
+                            \subparagraph{Esempio}\mbox{}\\
+                            $
+                            v_1=
+                            \begin{bmatrix}
+                                1\\
+                                1\\
+                                1
+                            \end{bmatrix}
+                            , v_2=
+                            \begin{bmatrix}
+                                1\\
+                                3\\
+                                1
+                            \end{bmatrix}
+                            $sono vettori \textbf{linearmente indipendenti} perché non sono multipli tra loro.
+                            $$
+                            \begin{bmatrix}
+                                1 & 1 & b_1\\
+                                1 & 3 & b_2\\
+                                1 & 1 & b_3
+                            \end{bmatrix}
+                            \xrightarrow[R_3-R_1]{R_2-R_1}
+                            \begin{bmatrix}
+                                \textcolor{blue}{1} & 1 & b_1\\
+                                0 & \textcolor{blue}{2} & b_2-b_1\\
+                                0 & 0 & \textcolor{orange}{b_3-b_1}
+                            \end{bmatrix}
+                            $$
+                            Il \textbf{pivot} da controllare è nell'ultima colonna quindi se $b_3-b_1=0 \Leftrightarrow$ \textbf{non} è un pivot della terza colonna.\\
+                            Quindi $Span(v_1,v_2)=\{\text{soluzioni di }x_3-x_1=0\}$
+                    \end{enumerate}
         \section{Dipendenza lineare}
             \paragraph{}I vettori $v_1,v_2,\dots,v_m \in V$ sono \textbf{linearmente indipendenti} se
             $$\lambda v_1+\lambda_2 v_2+\dots+\lambda_m V_m = 0$$ vale \textbf{solo} per $\lambda_1=\dots=\lambda_m=0$.
@@ -973,4 +1050,6 @@
                     1
                 \end{bmatrix}
                 $
+        \section{Dimensione}
+        La \textbf{dimensione} di uno spazio V sarà definita come il \textbf{numero degli elementi di una base}. \textbf{Questo numero è lo stesso per ogni base}. \footnote{Dimostrazione a fine lezione 06.}
 \end{document}

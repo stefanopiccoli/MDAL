@@ -58,17 +58,21 @@
 \contentsline {section}{\numberline {3.1}Span}{13}{}%
 \contentsline {paragraph}{}{13}{}%
 \contentsline {subparagraph}{Esempi}{13}{}%
+\contentsline {subsection}{\numberline {3.1.1}Esercizi}{14}{}%
 \contentsline {paragraph}{Verificare che $\boldsymbol {Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb {R}^3}$}{14}{}%
-\contentsline {paragraph}{In generale}{14}{}%
-\contentsline {section}{\numberline {3.2}Dipendenza lineare}{15}{}%
-\contentsline {paragraph}{}{15}{}%
-\contentsline {paragraph}{Geometricamente}{15}{}%
-\contentsline {paragraph}{Proposizione}{15}{}%
-\contentsline {paragraph}{Verificare se m vettori sono linearmente indipendenti}{15}{}%
-\contentsline {paragraph}{Esempio}{15}{}%
-\contentsline {section}{\numberline {3.3}Base}{16}{}%
+\contentsline {paragraph}{In generale}{15}{}%
+\contentsline {paragraph}{Trovare sistema di equazioni lineari omogenee tale che il sottospazio di $\boldsymbol {\mathbb {R}^n \text { associato sia }Span(v_1,\dots ,v_m)}$}{15}{}%
+\contentsline {subparagraph}{Esempio}{15}{}%
+\contentsline {section}{\numberline {3.2}Dipendenza lineare}{16}{}%
 \contentsline {paragraph}{}{16}{}%
+\contentsline {paragraph}{Geometricamente}{16}{}%
+\contentsline {paragraph}{Proposizione}{16}{}%
+\contentsline {paragraph}{Verificare se m vettori sono linearmente indipendenti}{16}{}%
 \contentsline {paragraph}{Esempio}{16}{}%
-\contentsline {subsection}{\numberline {3.3.1}Coordinate}{17}{}%
+\contentsline {section}{\numberline {3.3}Base}{17}{}%
 \contentsline {paragraph}{}{17}{}%
-\contentsline {paragraph}{Trovare le coordinate di un vettore rispetto alla base}{17}{}%
+\contentsline {paragraph}{Esempio}{17}{}%
+\contentsline {subsection}{\numberline {3.3.1}Coordinate}{18}{}%
+\contentsline {paragraph}{}{18}{}%
+\contentsline {paragraph}{Trovare le coordinate di un vettore rispetto alla base}{18}{}%
+\contentsline {section}{\numberline {3.4}Dimensione}{18}{}%
