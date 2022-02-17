@@ -1,78 +1,83 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{Introduzione}{2}{}%
-\contentsline {paragraph}{}{2}{}%
-\contentsline {paragraph}{}{2}{}%
-\contentsline {section}{\numberline {0.1}Equazioni a 3 variabili}{2}{}%
-\contentsline {paragraph}{}{2}{}%
-\contentsline {section}{\numberline {0.2}Caso generale}{3}{}%
+\contentsline {chapter}{Introduzione}{3}{}%
 \contentsline {paragraph}{}{3}{}%
-\contentsline {subsection}{\numberline {0.2.1}Sistema omogeneo}{3}{}%
 \contentsline {paragraph}{}{3}{}%
-\contentsline {subsection}{\numberline {0.2.2}Sistema omogeneo associato}{3}{}%
+\contentsline {section}{\numberline {0.1}Equazioni a 3 variabili}{3}{}%
 \contentsline {paragraph}{}{3}{}%
-\contentsline {subsection}{\numberline {0.2.3}Soluzione di un sistema}{3}{}%
-\contentsline {paragraph}{}{3}{}%
-\contentsline {paragraph}{Esempio}{3}{}%
-\contentsline {subparagraph}{Soluzione particolare}{4}{}%
-\contentsline {subparagraph}{Soluzione omogenea}{4}{}%
-\contentsline {subparagraph}{Soluzione generale}{4}{}%
-\contentsline {subsection}{\numberline {0.2.4}Trovare soluzioni comuni}{4}{}%
+\contentsline {section}{\numberline {0.2}Caso generale}{4}{}%
 \contentsline {paragraph}{}{4}{}%
-\contentsline {chapter}{\numberline {1}Matrici}{5}{}%
+\contentsline {subsection}{\numberline {0.2.1}Sistema omogeneo}{4}{}%
+\contentsline {paragraph}{}{4}{}%
+\contentsline {subsection}{\numberline {0.2.2}Sistema omogeneo associato}{4}{}%
+\contentsline {paragraph}{}{4}{}%
+\contentsline {subsection}{\numberline {0.2.3}Soluzione di un sistema}{4}{}%
+\contentsline {paragraph}{}{4}{}%
+\contentsline {paragraph}{Esempio}{4}{}%
+\contentsline {subparagraph}{Soluzione particolare}{5}{}%
+\contentsline {subparagraph}{Soluzione omogenea}{5}{}%
+\contentsline {subparagraph}{Soluzione generale}{5}{}%
+\contentsline {subsection}{\numberline {0.2.4}Trovare soluzioni comuni}{5}{}%
 \contentsline {paragraph}{}{5}{}%
-\contentsline {subsection}{\numberline {1.0.1}Operazioni}{5}{}%
-\contentsline {section}{\numberline {1.1}Matrice a scalini}{5}{}%
-\contentsline {paragraph}{}{5}{}%
-\contentsline {section}{\numberline {1.2}Algoritmo di Gauss}{6}{}%
-\contentsline {subparagraph}{Esempio}{6}{}%
+\contentsline {chapter}{\numberline {1}Matrici}{6}{}%
 \contentsline {paragraph}{}{6}{}%
-\contentsline {subparagraph}{Conclusioni}{7}{}%
-\contentsline {subsection}{\numberline {1.2.1}Casi possibili}{7}{}%
+\contentsline {subsection}{\numberline {1.0.1}Operazioni}{6}{}%
+\contentsline {section}{\numberline {1.1}Matrice a scalini}{6}{}%
+\contentsline {paragraph}{}{6}{}%
+\contentsline {section}{\numberline {1.2}Algoritmo di Gauss}{7}{}%
+\contentsline {subparagraph}{Esempio}{7}{}%
 \contentsline {paragraph}{}{7}{}%
-\contentsline {section}{\numberline {1.3}Matrice ridotta a scalini}{8}{}%
+\contentsline {subparagraph}{Conclusioni}{8}{}%
+\contentsline {subsection}{\numberline {1.2.1}Casi possibili}{8}{}%
 \contentsline {paragraph}{}{8}{}%
-\contentsline {subparagraph}{Esempi}{8}{}%
-\contentsline {section}{\numberline {1.4}Algoritmo di Gauss-Jordan}{8}{}%
-\contentsline {paragraph}{}{8}{}%
-\contentsline {subparagraph}{Esempio}{8}{}%
-\contentsline {subparagraph}{Conclusioni}{9}{}%
-\contentsline {chapter}{\numberline {2}Spazi vettoriali}{10}{}%
-\contentsline {paragraph}{}{10}{}%
-\contentsline {subsection}{\numberline {2.0.1}Somma}{10}{}%
-\contentsline {paragraph}{}{10}{}%
-\contentsline {subsection}{\numberline {2.0.2}Moltiplicazione}{10}{}%
-\contentsline {paragraph}{}{10}{}%
-\contentsline {section}{\numberline {2.1}Spazi vettoriali di dimensione n}{11}{}%
+\contentsline {section}{\numberline {1.3}Matrice ridotta a scalini}{9}{}%
+\contentsline {paragraph}{}{9}{}%
+\contentsline {subparagraph}{Esempi}{9}{}%
+\contentsline {section}{\numberline {1.4}Algoritmo di Gauss-Jordan}{9}{}%
+\contentsline {paragraph}{}{9}{}%
+\contentsline {subparagraph}{Esempio}{9}{}%
+\contentsline {subparagraph}{Conclusioni}{10}{}%
+\contentsline {chapter}{\numberline {2}Spazi vettoriali}{11}{}%
 \contentsline {paragraph}{}{11}{}%
-\contentsline {paragraph}{Definizione}{11}{}%
-\contentsline {subsection}{\numberline {2.1.1}Somma}{11}{}%
-\contentsline {subsection}{\numberline {2.1.2}Moltiplicazione}{11}{}%
-\contentsline {section}{\numberline {2.2}Sottospazi vettoriali}{12}{}%
+\contentsline {subsection}{\numberline {2.0.1}Somma}{11}{}%
+\contentsline {paragraph}{}{11}{}%
+\contentsline {subsection}{\numberline {2.0.2}Moltiplicazione}{11}{}%
+\contentsline {paragraph}{}{11}{}%
+\contentsline {section}{\numberline {2.1}Spazi vettoriali di dimensione n}{12}{}%
 \contentsline {paragraph}{}{12}{}%
-\contentsline {subparagraph}{Esempio}{12}{}%
-\contentsline {chapter}{\numberline {3}Combinazioni lineari}{13}{}%
+\contentsline {paragraph}{Definizione}{12}{}%
+\contentsline {subsection}{\numberline {2.1.1}Somma}{12}{}%
+\contentsline {subsection}{\numberline {2.1.2}Moltiplicazione}{12}{}%
+\contentsline {section}{\numberline {2.2}Sottospazi vettoriali}{13}{}%
 \contentsline {paragraph}{}{13}{}%
 \contentsline {subparagraph}{Esempio}{13}{}%
-\contentsline {subparagraph}{}{13}{}%
-\contentsline {section}{\numberline {3.1}Span}{13}{}%
-\contentsline {paragraph}{}{13}{}%
-\contentsline {subparagraph}{Esempi}{13}{}%
-\contentsline {subsection}{\numberline {3.1.1}Esercizi}{14}{}%
-\contentsline {paragraph}{Verificare che $\boldsymbol {Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb {R}^3}$}{14}{}%
-\contentsline {paragraph}{In generale}{15}{}%
-\contentsline {paragraph}{Trovare sistema di equazioni lineari omogenee tale che il sottospazio di $\boldsymbol {\mathbb {R}^n \text { associato sia }Span(v_1,\dots ,v_m)}$}{15}{}%
-\contentsline {subparagraph}{Esempio}{15}{}%
-\contentsline {section}{\numberline {3.2}Dipendenza lineare}{16}{}%
-\contentsline {paragraph}{}{16}{}%
-\contentsline {paragraph}{Geometricamente}{16}{}%
-\contentsline {paragraph}{Proposizione}{16}{}%
-\contentsline {paragraph}{Verificare se m vettori sono linearmente indipendenti}{16}{}%
-\contentsline {paragraph}{Esempio}{16}{}%
-\contentsline {section}{\numberline {3.3}Base}{17}{}%
+\contentsline {chapter}{\numberline {3}Combinazioni lineari}{14}{}%
+\contentsline {paragraph}{}{14}{}%
+\contentsline {subparagraph}{Esempio}{14}{}%
+\contentsline {subparagraph}{}{14}{}%
+\contentsline {section}{\numberline {3.1}Span}{14}{}%
+\contentsline {paragraph}{}{14}{}%
+\contentsline {subparagraph}{Esempi}{14}{}%
+\contentsline {subsection}{\numberline {3.1.1}Esercizi}{15}{}%
+\contentsline {paragraph}{Verificare che $\boldsymbol {Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb {R}^3}$}{15}{}%
+\contentsline {paragraph}{In generale}{16}{}%
+\contentsline {paragraph}{Trovare sistema di equazioni lineari omogenee tale che il sottospazio di $\boldsymbol {\mathbb {R}^n \text { associato sia }Span(v_1,\dots ,v_m)}$}{16}{}%
+\contentsline {subparagraph}{Esempio}{16}{}%
+\contentsline {section}{\numberline {3.2}Dipendenza lineare}{17}{}%
 \contentsline {paragraph}{}{17}{}%
+\contentsline {paragraph}{Geometricamente}{17}{}%
+\contentsline {paragraph}{Proposizione}{17}{}%
+\contentsline {paragraph}{Verificare se m vettori sono linearmente indipendenti}{17}{}%
 \contentsline {paragraph}{Esempio}{17}{}%
-\contentsline {subsection}{\numberline {3.3.1}Coordinate}{18}{}%
+\contentsline {section}{\numberline {3.3}Base}{18}{}%
 \contentsline {paragraph}{}{18}{}%
-\contentsline {paragraph}{Trovare le coordinate di un vettore rispetto alla base}{18}{}%
-\contentsline {section}{\numberline {3.4}Dimensione}{18}{}%
+\contentsline {paragraph}{Esempio}{18}{}%
+\contentsline {subsection}{\numberline {3.3.1}Coordinate}{19}{}%
+\contentsline {paragraph}{}{19}{}%
+\contentsline {paragraph}{Trovare le coordinate di un vettore rispetto alla base}{19}{}%
+\contentsline {section}{\numberline {3.4}Dimensione}{19}{}%
+\contentsline {subsection}{\numberline {3.4.1}Proprietà}{20}{}%
+\contentsline {paragraph}{}{20}{}%
+\contentsline {paragraph}{Esempio}{20}{}%
+\contentsline {paragraph}{Proposizione}{21}{}%
+\contentsline {paragraph}{Esempio}{21}{}%

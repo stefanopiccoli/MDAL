@@ -1052,4 +1052,155 @@
                 $
         \section{Dimensione}
         La \textbf{dimensione} di uno spazio V sarà definita come il \textbf{numero degli elementi di una base}. \textbf{Questo numero è lo stesso per ogni base}. \footnote{Dimostrazione a fine lezione 06.}
+            \subsection{Proprietà}
+            \paragraph{}Se $dim \; V=n$ e $v_1,\dots,v_r \in V$ i casi sono:
+            \begin{itemize}
+                \item $\boldsymbol{r>n} \Leftrightarrow v_1,\dots,v_r$ sono \textbf{linearmente dipendenti}
+                \item $\boldsymbol{r=n}$ \textbf{e} $\boldsymbol{v_1,\dots,v_n}$ \textbf{linearmente indipendenti} $\Leftrightarrow$ è una \textbf{base}
+                \item $\boldsymbol{r<n}$ \textbf{e} $\boldsymbol{v_1,\dots,v_n}$ \textbf{linearmente indipendenti} $\Leftrightarrow$ si \textbf{completa}\footnote{Posso aggiungere vettori affinché diventi una base} in una \textbf{base}
+            \end{itemize}
+            \paragraph{Esempio}\mbox{}\\
+                Decidiamo se 
+                    $
+                    \begin{bmatrix}
+                        1\\
+                        -1\\
+                        1
+                    \end{bmatrix}
+                    ,
+                    \begin{bmatrix}
+                        -1\\
+                        1\\
+                        -1
+                    \end{bmatrix}
+                    ,
+                    \begin{bmatrix}
+                        1\\
+                        -1\\
+                        1
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                        -1\\
+                        -1\\
+                        1
+                    \end{bmatrix}
+                    $ è una base di $\mathbb{R}^3$\\
+                    $dim \; \mathbb{R}^3 = 3 \Rightarrow$ \textbf{se} sono \textbf{indipendenti} formano una \textbf{base}.\\
+                    Verifichiamo con \textbf{Gauss}:
+                    $$
+                    \begin{bmatrix}
+                        1 & -1 & -1\\
+                        -1 & 1 & -1\\
+                        1 & -1 & 1
+                    \end{bmatrix}
+                    \xrightarrow[R_3-R_1]{R_2+R_1}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & -1 & -1\\
+                        0 & 0 & -2\\
+                        0 & 0 & 2
+                    \end{bmatrix}
+                    \xrightarrow[]{R_3+R_2}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & -1 & -1\\
+                        0 & 0 & \textcolor{blue}{-2}\\
+                        0 & 0 & 0
+                    \end{bmatrix}                                                
+                    $$
+                    2 \textbf{pivots} $\Rightarrow$ i vettori sono \textbf{linearmente dipendenti}.\\
+                    Però i \textbf{pivots} sono nelle colonne 1,3 quindi escludendo la colonna 2:
+                    $$
+                    v_1=
+                    \begin{bmatrix}
+                        1\\
+                        -1\\
+                        1
+                    \end{bmatrix}
+                    ,v_2=
+                    \begin{bmatrix}
+                        -1\\
+                        -1\\
+                        1
+                    \end{bmatrix}
+                    \text{sono \textbf{linearmente indipendenti.}}\footnote{Il vettore $v_2$ è il vecchio vettore $v_3$, cambio di notazione per proseguire l'esercizio}
+                    $$
+                    Ora $dim \; Span(v_1,v_2)=2, dim \; \mathbb{R}^3=3 $.\\
+                    Troviamo ora un vettore di $\mathbb{R}^3$ \textbf{non contenuto} nello $Span (v_1,v_2)$.\\
+                    Una strategia può essere partire dalla \textbf{base standard}:
+                    $
+                    \begin{bmatrix}
+                        1\\
+                        0\\
+                        0
+                    \end{bmatrix}
+                    ,
+                    \begin{bmatrix}
+                        0\\
+                        1\\
+                        0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        0\\
+                        0\\
+                        1
+                    \end{bmatrix}
+                    $
+                    Una delle 3 basi standard non è sicuramente contenuta nello $Span(v_1,v_2)$ altrimenti esso sarebbe una base.\\
+                    \textbf{Cerchiamo quindi il vettore della base standard che è linearmente indipendente agli altri 2 vettori.}
+                    Proviamo con $e_3$:
+                    $$
+                    \begin{bmatrix}
+                        1 & -1 & 0\\
+                        -1 & -1 & 0\\
+                        1 & 1 & 1
+                    \end{bmatrix}
+                    \xrightarrow[R_3-R_1]{R_2+R_1}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & -1 & 0\\
+                        0 & -2 & 0\\
+                        0 & 2 & 1
+                    \end{bmatrix}
+                    \xrightarrow[]{R_3+R_2}
+                    \begin{bmatrix}
+                        \textcolor{blue}{1} & -1 & 0\\
+                        0 & \textcolor{blue}{-2} & 0\\
+                        0 & 0 & \textcolor{blue}{1}
+                    \end{bmatrix}
+                    $$
+                    \textbf{3 pivots} $\Rightarrow e_3$ completa la nostra base. $e_1$ invece \textbf{non la completa}. 
+            \paragraph{Proposizione} Sia $W \subset V$ un \textbf{sottospazio}. Allora
+                    \begin{enumerate}
+                        \item $dim \; W \leq dim \; V$
+                        \item Se $W \neq V$, allora $dim \; W< dim \; V$
+                    \end{enumerate}
+                Questa proposizione è utile per calcolare le dimensioni dei sottospazi.
+                \paragraph{Esempio}
+                $$
+                \text{Sia }
+                V=\left \{
+                \begin{bmatrix}
+                    a & b\\
+                    c & d
+                \end{bmatrix}
+                \in M_{2x2} \; (\mathbb{R}):b=c \right \}
+                \text{\textbf{(Matrici simmetriche)}}
+                $$\\
+                $dim \; M_{2x2} \; (\mathbb{R})=4$ (base standard).\\[4px]
+                $V \neq M_{2x2}(\mathbb{R}) \Rightarrow dim \; V \leq 3$.\\[4px]
+                Ma 
+                $
+                \begin{bmatrix}
+                    1 & 0\\
+                    0 & 0
+                \end{bmatrix}
+                ,
+                \begin{bmatrix}
+                    0 & 0\\
+                    0 & 1
+                \end{bmatrix}
+                ,
+                \begin{bmatrix}
+                    0 & 1\\
+                    1 & 0
+                \end{bmatrix}
+                $ sono \textbf{linearmente indipendenti} $\Rightarrow dim \; V=3$
 \end{document}
