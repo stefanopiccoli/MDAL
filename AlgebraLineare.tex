@@ -396,7 +396,6 @@
                 \item Sulle \textbf{coordinate}: $\lambda (x_1,x_2):=(\lambda x_1,\lambda x_2)$
                 \item \textbf{Geometricamente}: La \textbf{lunghezza} è moltiplicata da $\lambda$ ma l'angolo non cambia.
             \end{itemize}
-        \clearpage
         \section{Spazi vettoriali di dimensione n}
             \paragraph{}Si definisce $\mathbb{R}^n:= \left \{
             \begin{bmatrix}
@@ -530,7 +529,7 @@
                     \end{bmatrix}
                     $$
                     \subparagraph{}Allora $-2v_1+1v_2=0$ è \textbf{combinazione lineare non banale}.
-        \section{Span}
+        \chapter{Span}
             \paragraph{}Siano $v_1,\dots,v_m \in V \;m$ vettori. Il \textbf{sottospazio generato} da $v_1,\dots,v_m$ è:
             $$
                 Span(v_1,v_2,...,v_m):= \left \{\lambda_1v_1+\lambda_2v_2+\dots+\lambda_mv_m\;:\;\lambda_1,\dots,\lambda_m \in \mathbb{R}\right\}
@@ -608,7 +607,7 @@
                         $.\\
                         Quindi un \textbf{sottospazio} può essere lo \textbf{span di vettori diversi}.
                 \end{enumerate}
-                \subsection{Esercizi}
+                \section{Esercizi}
                 \paragraph{Verificare che $\boldsymbol{Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb{R}^3}$}
                     $$
                     v_1=
@@ -784,7 +783,7 @@
                             Il \textbf{pivot} da controllare è nell'ultima colonna quindi se $b_3-b_1=0 \Leftrightarrow$ \textbf{non} è un pivot della terza colonna.\\
                             Quindi $Span(v_1,v_2)=\{\text{soluzioni di }x_3-x_1=0\}$
                     \end{enumerate}
-        \section{Dipendenza lineare}
+    \chapter{Dipendenza lineare}
             \paragraph{}I vettori $v_1,v_2,\dots,v_m \in V$ sono \textbf{linearmente indipendenti} se
             $$\lambda v_1+\lambda_2 v_2+\dots+\lambda_m V_m = 0$$ vale \textbf{solo} per $\lambda_1=\dots=\lambda_m=0$.
             Altrimenti sono \textbf{linearmente dipendenti}.
@@ -885,7 +884,7 @@
                     $$
                 Ci sono 3 \textbf{pivots} e una \textbf{variabile libera} $\Rightarrow \boldsymbol{\infty}$ \textbf{soluzioni}.\\
                 Il sistema ammette \textbf{soluzioni non banali} $\Rightarrow$ i vettori sono \textbf{linearmente dipendenti}.
-        \section{Base}
+    \chapter{Basi}
             \paragraph{}Un sistema $v_1,\dots,v_n$ di vettori è una \textbf{base} di V se:
             \begin{itemize}
                 \item i vettori $v_1,\dots,v_n$ sono \textbf{linearmente indipendenti}
@@ -928,7 +927,7 @@
                 Dunque $Span (e_1,\dots,e_n)=\mathbb{R}^n$ e 
                 $\lambda_1 e_1+\dots+\lambda_n e_n=0$ 
                 se e solo se \\$\lambda_1=\dots=\lambda_n=0$.
-            \subsection{Coordinate}
+            \section{Coordinate}
                 \paragraph{}Sia $v_1,\dots,v_n$ una base di V e $v \in V$ un vettore. 
                 Allora $$\exists! \; \alpha_1,\dots,\alpha_n : v=\alpha_1 v_1+\alpha_2 v_2+\dots+\alpha_n v_n$$
                 ovvero \textbf{ogni vettore} si scrive in un modo \textbf{unico} come \textbf{combinazione lineare} degli \textbf{elementi della base}.\\
@@ -1050,9 +1049,9 @@
                     1
                 \end{bmatrix}
                 $
-        \section{Dimensione}
+    \chapter{Dimensione}
         La \textbf{dimensione} di uno spazio V sarà definita come il \textbf{numero degli elementi di una base}. \textbf{Questo numero è lo stesso per ogni base}. \footnote{Dimostrazione a fine lezione 06.}
-            \subsection{Proprietà}
+            \section{Proprietà}
             \paragraph{}Se $dim \; V=n$ e $v_1,\dots,v_r \in V$ i casi sono:
             \begin{itemize}
                 \item $\boldsymbol{r>n} \Leftrightarrow v_1,\dots,v_r$ sono \textbf{linearmente dipendenti}
@@ -1203,4 +1202,215 @@
                     1 & 0
                 \end{bmatrix}
                 $ sono \textbf{linearmente indipendenti} $\Rightarrow dim \; V=3$
+        \section{Sottospazi}
+            \subsection{Intersezioni di sottospazi}
+                \paragraph{}Se $W_1,W_2 \subset V$ sottospazi $\Rightarrow W_1 \cap W_2$ è sottospazio.
+            \subsection{Formula di Grassmann}
+                \paragraph{}Siano $V_1,V_2 \subset V$ due sottospazi allora
+                $$V_1+V_2:=\{v_1+v_2 : v_1 \in V_1, v_2 \in V_2 \}$$
+            \paragraph{Osservazione}$V_1+V_2$ è un \textbf{sottospazio}.
+            \paragraph{Esempio}
+                $$
+                V_1=\left \{ 
+                \begin{bmatrix}
+                    0\\
+                    a_2\\
+                    a_3
+                \end{bmatrix}
+                :a_2,a_3 \in \mathbb{R}^3    
+                \right \}
+                ,V_2=\left \{ 
+                \begin{bmatrix}
+                    a_1\\
+                    a_2\\
+                    0
+                \end{bmatrix}
+                :a_1,a_2 \in \mathbb{R}^3    
+                \right \} \subset \mathbb{R}^3
+                $$
+                $V_1+V_2=\mathbb{R}^3$, ma anche $V_1 \cap V_2=\left \{ 
+                    \begin{bmatrix}
+                    0\\
+                        a_2\\
+                        0
+                    \end{bmatrix}
+                    :a_2 \in \mathbb{R}^3    
+                \right \}
+                $
+            \paragraph{Formula di Grassmann} Se $dim < \infty, V_1,V_2 \subset V$ sottospazi allora
+            $$dim(V_1+V_2)=dim \; V_1 + dim \; V_2 - dim(V_1 \cap V_2)$$
+            \paragraph{Esempio} In $\mathbb{R}^4$ consideriamo i sottospazi
+            $$
+            V=\left \{
+            \text{soluzioni di}
+            \begin{cases}
+                x_1+2x_2+x_3=0\\
+                -x_1-x_2+3x_4=0
+            \end{cases}    
+            \right \}
+            $$
+            $$
+            W=Span \left (
+            v_1=
+            \begin{bmatrix}
+                2\\
+                0\\
+                1\\
+                1
+            \end{bmatrix}
+            ,v_2=
+            \begin{bmatrix}
+                3\\
+                -2\\
+                -2\\ 
+                0
+            \end{bmatrix}
+            \right )
+            $$
+            Calcoliamo $dim(V \cap W )$, $dim(V+W)$
+            \paragraph{Soluzione}\mbox{}\\
+            $\boldsymbol{dim \; W=2}$ perché ovviamente $W_1 \neq \lambda W_2$.\\
+            Calcoliamo $\dim \; V$
+            $$
+            \begin{bmatrix}
+                1 & 2 & 1 & 0\\
+                -1 & -1 & 0 & 3
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                \textcolor{blue}{1} & 2 & 1 & 0\\
+                0 & \textcolor{blue}{1} & 1 & 3
+            \end{bmatrix}
+            \rightarrow
+            \begin{cases}
+                x_1+2x_2+x_3=0\\
+                x_2+x_3+3x_4=0
+            \end{cases}
+            $$
+            $
+            x_3,x_4 \text{ variabili libere} \rightarrow
+            \begin{cases}
+                x_2=-x_3-3x_4\\
+                x_1=-2(-x_3-3x_4)-x_3=x_3+6x_4
+            \end{cases}
+            $\\
+            $
+            \text{Soluzione generale}
+            \begin{bmatrix}
+                x_3+6x_4\\
+                -x_3-3x_4\\
+                x_3\\
+                x_4
+            \end{bmatrix}
+            $
+            \\
+            Posso scrivere in forma parametrizzata 
+            $
+            x_3
+            \begin{bmatrix}
+                1\\
+                -1\\
+                1\\
+                0
+            \end{bmatrix}
+            +x_4
+            \begin{bmatrix}
+                6\\
+                -3\\
+                0\\
+                1
+            \end{bmatrix}
+            $
+            e ora sappiamo che $\boldsymbol{dim \; V=2 \text{ e } v_1, v_2}$\textbf{ è una base}.\\
+            Cerchiamo ora $dim(V+W)$.\\
+            $V+W=Span(v_1,v_2,w_1,w_2)$\\
+            Troviamo una base con \textbf{Gauss}:
+            $$
+            \begin{bmatrix}
+                1 & 6 & 2 & 3\\
+                -1 & -3 & 0 & -2\\
+                1 & 0 & 1 & -2\\
+                0 & 1 & 1 & 0
+            \end{bmatrix}
+            \xrightarrow[R_3-R_1]{R_2+R_1}
+            \begin{bmatrix}
+                1 & 6 & 2 & 3\\
+                0 & 3 & 2 & 1\\
+                0 & -6 & -1 & -5\\
+                0 & 1 & 1 & 0
+            \end{bmatrix}
+            \xrightarrow[]{R_3-2R_1}
+            \begin{bmatrix}
+                1 & 6 & 2 & 3\\
+                0 & 3 & 2 & 1\\
+                0 & 0 & 3 & -3\\
+                0 & 1 & 1 & 0
+            \end{bmatrix}
+            $$
+            $$
+            \xrightarrow[]{R_2\circlearrowright R_4}
+            \begin{bmatrix}
+                1 & 6 & 2 & 3\\
+                0 & 1 & 1 & 0\\
+                0 & 0 & 3 & -3\\
+                0 & 3 & 2 & 1
+            \end{bmatrix}
+            \xrightarrow[]{R_4-3R_2}
+            \begin{bmatrix}
+                1 & 6 & 2 & 3\\
+                0 & 1 & 1 & 0\\
+                0 & 0 & 3 & -3\\
+                0 & 0 & -1 & 1
+            \end{bmatrix}
+            \xrightarrow[]{R_4+\frac{1}{3}R_3}
+            \begin{bmatrix}
+                \textcolor{blue}{1} & 6 & 2 & 3\\
+                0 & \textcolor{blue}{1} & 1 & 0\\
+                0 & 0 & \textcolor{blue}{3} & -3\\
+                0 & 0 & 0 & 0
+            \end{bmatrix}
+            $$
+            \textbf{3 pivots} quindi le prime 3 colonne sono indipendenti.\\
+            Quindi $\boldsymbol{dim \; Span(v_1,v_2,w_1,w_2)=dim(V+W)=3}$.\\
+            \textbf{Grassmann:} $dim (V \cap W) = dim \; V + dim \; W - dim(V+W)=2+2-3=1$\\[4px]
+            Potevamo anche calcolare direttamente $dim(V\cap W)$:
+            $$
+            Y\cap W = \left \{ \lambda_1
+            \begin{bmatrix}
+                2\\
+                0\\
+                1\\
+                1
+            \end{bmatrix}    
+            +\lambda_2
+            \begin{bmatrix}
+                3\\
+                -2\\
+                -2\\
+                0
+            \end{bmatrix}
+            \text{ che soddisfano }
+            \begin{cases}
+                x_1+2x_2+x_3=0\\
+                -x_1-x_2+3x_4=0
+            \end{cases}
+            \right \}
+            $$
+            Sostituiamo e otteniamo:
+            $$
+            \begin{cases}
+                (2\lambda_1+3\lambda_2)+2(-2\lambda_2)+(\lambda_1-2\lambda_2)=0\\
+                -(2\lambda_1+3\lambda_2)+(-2\lambda_2)+3\lambda_1=0
+            \end{cases}\\
+            $$
+            $$
+            \begin{cases}
+                3\lambda_1-3\lambda_2=0\\
+                \lambda_1-\lambda_2=0
+            \end{cases}
+            $$
+            $$
+            \lambda_1=\lambda_2 \Rightarrow dim (V \cap W)=1 \text{ perché } V\cap W=\{\lambda(w_1+w_2):\lambda \in \mathbb{R}\}
+            $$
+            %-10
 \end{document}
