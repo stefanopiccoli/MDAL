@@ -91,3 +91,13 @@
 \contentsline {paragraph}{Formula di Grassmann}{24}{}%
 \contentsline {paragraph}{Esempio}{24}{}%
 \contentsline {paragraph}{Soluzione}{25}{}%
+\contentsline {chapter}{\numberline {8}Applicazioni lineari}{27}{}%
+\contentsline {paragraph}{Definizione}{27}{}%
+\contentsline {section}{\numberline {8.1}Kernel}{27}{}%
+\contentsline {paragraph}{}{27}{}%
+\contentsline {paragraph}{Proposizione}{27}{}%
+\contentsline {section}{\numberline {8.2}Immagine}{27}{}%
+\contentsline {paragraph}{}{27}{}%
+\contentsline {paragraph}{Proposizione}{27}{}%
+\contentsline {section}{\numberline {8.3}Dimensione}{27}{}%
+\contentsline {paragraph}{Teorema}{27}{}%

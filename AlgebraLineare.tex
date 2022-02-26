@@ -1413,4 +1413,22 @@
             \lambda_1=\lambda_2 \Rightarrow dim (V \cap W)=1 \text{ perché } V\cap W=\{\lambda(w_1+w_2):\lambda \in \mathbb{R}\}
             $$
             %-10
+    \chapter{Applicazioni lineari}
+        \paragraph{Definizione}Siano $V_1,V_2$ spazi vettoriali su $\mathbb{R}$. Un'\textbf{applicazione lineare} è una mappa $\varphi: V_1 \rightarrow V_2$ che soddisfa:
+            \begin{itemize}
+                \item $\varphi (v_1+v_2)=\varphi(v_1)+\varphi(v_2) \; \forall v_1,v_2 \in V_1$
+                \item $\lambda \varphi(v)=\varphi(\lambda v) \; \forall \lambda \in \mathbb{R}, \forall v \in V_1$
+            \end{itemize}
+        \section{Kernel}
+            \paragraph{}Il \textbf{Kernel o nucleo} è un sottospazio:    
+            $$Ker(\varphi):= \{v \in V_1 : \varphi(v)=0\}$$
+            \paragraph{Proposizione}$Ker(\varphi_1) \subset V_1$ è un sottospazio.
+        \section{Immagine}
+            \paragraph{}L'\textbf{immagine} è un sottospazio:
+            $$Im(\varphi):=\{w \in V_2: \exists v \in V_1 \text{ tale che }w=\varphi(v)\}$$
+            \paragraph{Proposizione}$Ker(\varphi) \subset V_2$ è un sottospazio.
+        \section{Dimensione}
+            \paragraph{Teorema} Se $dim \; V_1<\infty$ allora
+            $$dim \; Ker(\varphi)+dim \; Im(\varphi)=dim \; V_1$$
+            in $\varphi:V_1\rightarrow V_2$. La dimensione di $V_2$ non riguarda questo teorema.        
 \end{document}
