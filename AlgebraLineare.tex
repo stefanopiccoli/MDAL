@@ -1414,7 +1414,7 @@
             $$
             %-10
     \chapter{Applicazioni lineari}
-        \paragraph{Definizione}Siano $V_1,V_2$ spazi vettoriali su $\mathbb{R}$. Un'\textbf{applicazione lineare} è una mappa $\varphi: V_1 \rightarrow V_2$ che soddisfa:
+        \paragraph{Definizione}Siano $V_1,V_2$ spazi vettoriali su $\mathbb{R}$. Un'\textbf{applicazione lineare} è una funzione $\varphi: V_1 \rightarrow V_2$ che soddisfa:
             \begin{itemize}
                 \item $\varphi (v_1+v_2)=\varphi(v_1)+\varphi(v_2) \; \forall v_1,v_2 \in V_1$
                 \item $\lambda \varphi(v)=\varphi(\lambda v) \; \forall \lambda \in \mathbb{R}, \forall v \in V_1$
@@ -1430,5 +1430,194 @@
         \section{Dimensione}
             \paragraph{Teorema} Se $dim \; V_1<\infty$ allora
             $$dim \; Ker(\varphi)+dim \; Im(\varphi)=dim \; V_1$$
-            in $\varphi:V_1\rightarrow V_2$. La dimensione di $V_2$ non riguarda questo teorema.        
+            in $\varphi:V_1\rightarrow V_2$. La dimensione di $V_2$ non riguarda questo teorema.
+        \section{Prodotto}
+            \paragraph{}Se $A \in M_{mxn}(\mathbb{R}), v \in \mathbb{R}^n$, il loro \textbf{prodotto} è il vettore in $\mathbb{R}^m$:
+            $$
+            A=
+            \begin{bmatrix}
+                a_{11} & \dots & a_{1n}\\
+                \vdots & \vdots & \vdots\\
+                a_{m1} & \dots & a_{mn}
+            \end{bmatrix}
+            \cdot 
+            \begin{bmatrix}
+                b_1\\
+                \vdots\\
+                b_n
+            \end{bmatrix}
+            :=
+            \begin{bmatrix}
+                a_{11}b_1+a_{12}b_2+\dots+a_{1n}b_n\\
+                a_{21}b_1+a_{22}b_2+\dots+a_{2n}b_n\\
+                \vdots\\
+                a_{m1}b_1+a_{m2}b_2+\dots+a_{mn}b_n
+            \end{bmatrix}
+            \in \mathbb{R}^m
+            $$
+            Il vettore moltiplicato deve avere lo stesso numero di colonne della matrice.
+            \paragraph{Proposizione} Se $v=
+            \begin{bmatrix}
+                b_1\\
+                \vdots\\
+                b_n
+            \end{bmatrix}
+            $
+            è un vettore generale, allora $\varphi(v)=A\cdot v$.
+            \paragraph{Esempio 1}Sia $\varphi:\mathbb{R}^3\rightarrow R,\; \varphi \left (
+                \begin{bmatrix}
+                    x\\
+                    y\\
+                    z
+                \end{bmatrix}
+            \right )=x+2y+3z$. Trovare 
+            $
+            \varphi \left (
+            \begin{bmatrix}
+                1\\
+                -1\\
+                1
+            \end{bmatrix}
+            \right )
+            $.\\
+            Naturalmente $1\cdot 1+-2\cdot 1+1\cdot 3=2$. Ma anche:
+            $$
+            \varphi \left ( 
+            \begin{bmatrix}
+                1\\
+                0\\
+                0\\
+            \end{bmatrix}    
+            \right )
+            =1,\;
+            \varphi \left ( 
+            \begin{bmatrix}
+                0\\
+                1\\
+                0\\
+            \end{bmatrix}    
+            \right )
+            =2,\;
+            \varphi \left ( 
+            \begin{bmatrix}
+                0\\
+                0\\
+                1\\
+            \end{bmatrix}    
+            \right )
+            =3.\;
+            $$
+            $$
+            \varphi \left ( 
+            \begin{bmatrix}
+                1\\
+                -1\\
+                1\\
+            \end{bmatrix}    
+            \right )
+            =
+            \begin{bmatrix}
+                1 & 2 & 3
+            \end{bmatrix}
+            \cdot
+            \begin{bmatrix}
+                1\\
+                -1\\
+                1\\
+            \end{bmatrix}
+            =1\cdot 1+2\cdot -1+1 \cdot 3=2 
+            $$
+            \paragraph{Esempio 2}$\varphi:\mathbb{R}^2\rightarrow \mathbb{R}^2, \;
+            \varphi \left(
+            \begin{bmatrix}
+                x\\
+                y
+            \end{bmatrix}
+            \right)
+            =
+            \left(
+            \begin{bmatrix}
+                x+y\\
+                x-y    
+            \end{bmatrix}
+            \right)
+            $
+            $$
+            \varphi \left ( 
+                \begin{bmatrix}
+                    1\\
+                    0\\
+                \end{bmatrix}    
+                \right )
+                =
+                \begin{bmatrix}
+                    1\\
+                    1
+                \end{bmatrix},\;
+                \varphi \left ( 
+                \begin{bmatrix}
+                    0\\
+                    1\\
+                \end{bmatrix}    
+                \right )
+                =
+                \begin{bmatrix}
+                    1\\
+                    -1
+                \end{bmatrix}.
+            $$
+            $$
+            \begin{bmatrix}
+                1 & 1\\
+                1 & -1
+            \end{bmatrix}
+            \cdot
+            \begin{bmatrix}
+                b_1\\
+                b_2
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                b_1+b_2\\
+                b_1-b_2
+            \end{bmatrix}
+            \text{ Vettore generico}
+            $$
+            \paragraph{Conclusione} Se $\varphi:\mathbb{R}^n\rightarrow \mathbb{R}^m$ lineare, $\varphi(e_1),...,\varphi(e_n)$ base standard allora:
+            \begin{itemize}
+                \item $\varphi(e_1),\dots,\varphi(e_n)$ \textbf{determina} $\boldsymbol{\varphi}$\textbf{ in maniera unica}
+                \item $\forall v$ possiamo calcolare $\varphi(v)=A \cdot v$ dove $A \in M_{mxn} (\mathbb{R})$ è la matrice definita nel punto precedente.
+            \end{itemize}
+        \section{Generalizzazione}
+            \paragraph{}Sia $\varphi:V \rightarrow W$ lineare.\\
+            Sia $B=\{e_1,\dots,e_n\}$ una base di V [dim V = n]\\
+            Sia $B'=\{e_1',\dots,e_m'\}$ una base di W [dim W = m]\\
+            Scriviamo
+            $$
+            \begin{matrix}
+                \varphi(e_1)=a_{11}e'_1+a_{21}e'_2+\dots+a_{m1}e'_m\\
+                \varphi(e_2)=a_{12}e'_1+a_{22}e'_2+\dots+a_{m2}e'_m\\
+                \vdots\\
+                \varphi(e_n)=a_{1n}e'_1+a_{2n}e'_2+\dots+a_{mn}e'_m
+            \end{matrix}
+            $$
+            \textbf{La matrice di} $\boldsymbol{\varphi}$ \textbf{rispetto alla base} $\boldsymbol{B,B'}$ \textbf{è}:
+            $$
+            A=
+            \begin{bmatrix}
+                a_{11} & a_{12} & \dots & a_{1n}\\
+                a_{21} & a_{22} & \dots & a_{2n}\\
+                \vdots\\
+                a_{m1} & a_{m2} & \dots & a_{mn}
+            \end{bmatrix}
+            \in M_{mxn}(\mathbb{R})
+            $$
+            Quindi 
+            $$
+            A=
+            \begin{bmatrix}
+                \varphi(e_1)& \vline & \varphi(e_2)& \vline & \dots & \vline & \varphi(e_n)
+            \end{bmatrix}
+            $$
+            dove le \textbf{colonne sono le coordinate di} $\boldsymbol{\varphi(e_i)}$ rispetto a $e_1',\dots,e_m'$.
 \end{document}
