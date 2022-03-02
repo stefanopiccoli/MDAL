@@ -12,6 +12,7 @@
   \hrule width \textwidth height 1pt
   \kern 2pt
 }%ALLUNGA LINEA PIE DI PAGINA
+\setcounter{tocdepth}{3}%AGGIUNGE SUBSUBSECTION ALL'INDICE
 %INIZIO
 \begin{document}
 \title{
@@ -470,6 +471,7 @@
                 \end{bmatrix}
                 \lambda \in \mathbb{R}.
                 $$
+            \clearpage
             \section{Sottospazi vettoriali}
                 \paragraph{}Sia V uno spazio vettoriale. Un \textbf{sottospazio} $W \subset V$ è
                 un sottoinsieme tale che
@@ -511,7 +513,8 @@
                                 variabili definiscono un \textbf{sottospazio} di $\mathbb{R}^m$.\\
                                 \textbf{Non definiscono un sottospazio} di $\mathbb{R}^m$ le soluzioni di equazioni lineari \textbf{non omogenee} (coefficiente $\neq 0$).
                     \end{enumerate}
-    \chapter{Combinazioni lineari}
+            \clearpage
+            \section{Combinazioni lineari}
                 \paragraph{}Sia V uno spazio vettoriale, $v_1,v_2,\dots,v_m \in V$.
                 Una \textbf{combinazione lineare} di $v_1,\dots,v_m$ è una somma $\boldsymbol{\lambda_1 v_1+\lambda_2 v_2+\dots+\lambda_m v_m \in V}$, dove $\lambda_1,\lambda_2,\dots,\lambda_m \in \mathbb{R}$.\\
                 La combinazione lineare è detta \textbf{banale} se $\lambda_1=\dots=\lambda_m=0$.
@@ -529,7 +532,7 @@
                     \end{bmatrix}
                     $$
                     \subparagraph{}Allora $-2v_1+1v_2=0$ è \textbf{combinazione lineare non banale}.
-        \chapter{Span}
+        \section{Span}
             \paragraph{}Siano $v_1,\dots,v_m \in V \;m$ vettori. Il \textbf{sottospazio generato} da $v_1,\dots,v_m$ è:
             $$
                 Span(v_1,v_2,...,v_m):= \left \{\lambda_1v_1+\lambda_2v_2+\dots+\lambda_mv_m\;:\;\lambda_1,\dots,\lambda_m \in \mathbb{R}\right\}
@@ -607,7 +610,7 @@
                         $.\\
                         Quindi un \textbf{sottospazio} può essere lo \textbf{span di vettori diversi}.
                 \end{enumerate}
-                \section{Esercizi}
+                    \subsection{Esercizi}
                 \paragraph{Verificare che $\boldsymbol{Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb{R}^3}$}
                     $$
                     v_1=
@@ -783,7 +786,7 @@
                             Il \textbf{pivot} da controllare è nell'ultima colonna quindi se $b_3-b_1=0 \Leftrightarrow$ \textbf{non} è un pivot della terza colonna.\\
                             Quindi $Span(v_1,v_2)=\{\text{soluzioni di }x_3-x_1=0\}$
                     \end{enumerate}
-    \chapter{Dipendenza lineare}
+        \section{Dipendenza lineare}
             \paragraph{}I vettori $v_1,v_2,\dots,v_m \in V$ sono \textbf{linearmente indipendenti} se
             $$\lambda v_1+\lambda_2 v_2+\dots+\lambda_m V_m = 0$$ vale \textbf{solo} per $\lambda_1=\dots=\lambda_m=0$.
             Altrimenti sono \textbf{linearmente dipendenti}.
@@ -884,7 +887,7 @@
                     $$
                 Ci sono 3 \textbf{pivots} e una \textbf{variabile libera} $\Rightarrow \boldsymbol{\infty}$ \textbf{soluzioni}.\\
                 Il sistema ammette \textbf{soluzioni non banali} $\Rightarrow$ i vettori sono \textbf{linearmente dipendenti}.
-    \chapter{Basi}
+        \section{Basi}
             \paragraph{}Un sistema $v_1,\dots,v_n$ di vettori è una \textbf{base} di V se:
             \begin{itemize}
                 \item i vettori $v_1,\dots,v_n$ sono \textbf{linearmente indipendenti}
@@ -927,7 +930,7 @@
                 Dunque $Span (e_1,\dots,e_n)=\mathbb{R}^n$ e 
                 $\lambda_1 e_1+\dots+\lambda_n e_n=0$ 
                 se e solo se \\$\lambda_1=\dots=\lambda_n=0$.
-            \section{Coordinate}
+            \subsection{Coordinate}
                 \paragraph{}Sia $v_1,\dots,v_n$ una base di V e $v \in V$ un vettore. 
                 Allora $$\exists! \; \alpha_1,\dots,\alpha_n : v=\alpha_1 v_1+\alpha_2 v_2+\dots+\alpha_n v_n$$
                 ovvero \textbf{ogni vettore} si scrive in un modo \textbf{unico} come \textbf{combinazione lineare} degli \textbf{elementi della base}.\\
@@ -1049,9 +1052,9 @@
                     1
                 \end{bmatrix}
                 $
-    \chapter{Dimensione}
+        \section{Dimensione}
         La \textbf{dimensione} di uno spazio V sarà definita come il \textbf{numero degli elementi di una base}. \textbf{Questo numero è lo stesso per ogni base}. \footnote{Dimostrazione a fine lezione 06.}
-            \section{Proprietà}
+            \subsection{Proprietà}
             \paragraph{}Se $dim \; V=n$ e $v_1,\dots,v_r \in V$ i casi sono:
             \begin{itemize}
                 \item $\boldsymbol{r>n} \Leftrightarrow v_1,\dots,v_r$ sono \textbf{linearmente dipendenti}
@@ -1202,10 +1205,10 @@
                     1 & 0
                 \end{bmatrix}
                 $ sono \textbf{linearmente indipendenti} $\Rightarrow dim \; V=3$
-        \section{Sottospazi}
-            \subsection{Intersezioni di sottospazi}
+            \subsection{Sottospazi}
+                \subsubsection{Intersezioni di sottospazi}
                 \paragraph{}Se $W_1,W_2 \subset V$ sottospazi $\Rightarrow W_1 \cap W_2$ è sottospazio.
-            \subsection{Formula di Grassmann}
+                \subsubsection{Formula di Grassmann}
                 \paragraph{}Siano $V_1,V_2 \subset V$ due sottospazi allora
                 $$V_1+V_2:=\{v_1+v_2 : v_1 \in V_1, v_2 \in V_2 \}$$
             \paragraph{Osservazione}$V_1+V_2$ è un \textbf{sottospazio}.
@@ -1412,21 +1415,216 @@
             $$
             \lambda_1=\lambda_2 \Rightarrow dim (V \cap W)=1 \text{ perché } V\cap W=\{\lambda(w_1+w_2):\lambda \in \mathbb{R}\}
             $$
-            %-10
+        \section{Rango}
+            \paragraph{}Se 
+            $
+            A=
+            \begin{bmatrix}
+                a_{11} & \dots & a_{1n}\\
+                \vdots\\
+                a_{n1} & \dots & a_{mn}                
+            \end{bmatrix}
+            $
+            , il \textbf{rango} di A è
+            $$
+            rg(A):=dim \; Span \left (
+                \begin{bmatrix}
+                    a_{11}\\
+                    \vdots\\
+                    a_{m1}
+                \end{bmatrix}
+            , ... ,
+                \begin{bmatrix}
+                    a_{1n}\\
+                    \vdots\\
+                    a_{mn}
+                \end{bmatrix}
+            \right )
+            $$
+            \subsection{Trovare il rango}
+            \paragraph{}Per calcolare $rg(A)$ bisogna: 
+            \begin{itemize}
+                \item estrarre una base di $Span(\text{colonne})$.
+                \item usare l'algoritmo di Gauss sulla matrice A
+            \end{itemize}
+            Se numero colonne linearmente indipendenti = numero dei pivots della forma a scalini $\Rightarrow \boldsymbol{rg(A)=} \text{\textbf{numero di pivot nella forma a scalini}.}$
+
     \chapter{Applicazioni lineari}
         \paragraph{Definizione}Siano $V_1,V_2$ spazi vettoriali su $\mathbb{R}$. Un'\textbf{applicazione lineare} è una funzione $\varphi: V_1 \rightarrow V_2$ che soddisfa:
             \begin{itemize}
                 \item $\varphi (v_1+v_2)=\varphi(v_1)+\varphi(v_2) \; \forall v_1,v_2 \in V_1$
                 \item $\lambda \varphi(v)=\varphi(\lambda v) \; \forall \lambda \in \mathbb{R}, \forall v \in V_1$
             \end{itemize}
+        \clearpage
         \section{Kernel}
             \paragraph{}Il \textbf{Kernel o nucleo} è un sottospazio:    
             $$Ker(\varphi):= \{v \in V_1 : \varphi(v)=0\}$$
             \paragraph{Proposizione}$Ker(\varphi_1) \subset V_1$ è un sottospazio.
+            \subsection{Trovare il Kernel utilizzando la matrice}
+            $$
+            \text{Se } A=
+            \begin{bmatrix}
+                a_{11} & \dots & a_{1n}\\
+                \vdots\\
+                a_{n1} & \dots & a_{mn}
+            \end{bmatrix}
+            \text{, } v=
+            \begin{bmatrix}
+                x_1\\
+                \vdots\\
+                x_n
+            \end{bmatrix}
+            $$
+            $$
+            v \in Ker(\varphi) \Leftrightarrow Av=0 \Leftrightarrow 
+            \begin{bmatrix}
+                x_1\\
+                \vdots\\
+                x_n
+            \end{bmatrix}
+            \text{è soluzione di}
+            \begin{cases}
+                a_{11}x_1+\dots+a_{1n}x_n=0\\
+                \vdots\\
+                a_{m1}x_1+\dots+a_{mn}x_n=0
+            \end{cases}
+            $$
+            Quindi per trovare $Ker(\varphi)$ bisogna \textbf{risolvere il sistema omogeneo} (ad esempio con Gauss).
+            \paragraph{Esempio} Sia $\varphi: \mathbb{R}^4\rightarrow \mathbb{R}^3$ della matrice
+            $
+            \begin{bmatrix}
+                1 & 2 & -1 & -2\\
+                1 & 1 & 1 & 1\\
+                1 & 0 & 3 & 4
+            \end{bmatrix}
+            $
+            Trovare $Ker(\varphi)$.
+            Applichiamo Gauss alla matrice di $\varphi$.
+            $$
+            \rightarrow
+            \begin{bmatrix}
+                1 & 2 & -1 & -2\\
+                0 & -1 & 2 & 3\\
+                0 & -2 & 4 & 6
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                \textcolor{blue}{1} & 2 & -1 & -2\\
+                0 & \textcolor{blue}{-1} & 2 & 3\\
+                0 & 0 & 0 & 0
+            \end{bmatrix}
+            $$
+            $Ker(\varphi) \Leftrightarrow$ soluzioni di 
+            $
+            \begin{cases}
+                x_1+2x_2-3x_3-2x_4=0\\
+                -x_2+2x_3+3x_4=0
+            \end{cases}
+            $
+            \\
+            $
+            \Rightarrow
+            \begin{cases}
+                x_2=2x_3+3x_4\\
+                x_1=-3x_3-4x_4
+            \end{cases}
+            \Rightarrow
+            \begin{bmatrix}
+                -3\\
+                2\\
+                1\\
+                0
+            \end{bmatrix}
+            x_3
+            \begin{bmatrix}
+                -4\\
+                3\\
+                0\\
+                1
+            \end{bmatrix}
+            x_4
+            $ soluzione generale del sistema.\\
+            Quindi
+            $
+            \begin{bmatrix}
+                -3\\
+                2\\
+                1\\
+                0
+            \end{bmatrix}
+            x_3
+            \begin{bmatrix}
+                -4\\
+                3\\
+                0\\
+                1
+            \end{bmatrix}
+            x_4
+            $
+            è la \textbf{base} di $Ker(\varphi)$.
         \section{Immagine}
             \paragraph{}L'\textbf{immagine} è un sottospazio:
             $$Im(\varphi):=\{w \in V_2: \exists v \in V_1 \text{ tale che }w=\varphi(v)\}$$
             \paragraph{Proposizione}$Ker(\varphi) \subset V_2$ è un sottospazio.
+            \subsection{Trovare l'immagine utilizzando la matrice}
+                \paragraph{}Sappiamo che se $e_1,\dots,e_n$ è la base standard,
+                $$
+                \varphi(e_1)=
+                \begin{bmatrix}
+                    a_{11}\\
+                    \vdots\\
+                    a_{m1}
+                \end{bmatrix}
+                ,\dots, \;
+                \varphi(e_n)=
+                \begin{bmatrix}
+                    a_{1n}\\
+                    \vdots\\
+                    a_{mn}
+                \end{bmatrix}
+                $$
+            Ma $Im(\varphi) = Span(\varphi(e_1),\dots,\varphi(e_n))$\\
+            Quindi $\boldsymbol{Im(\varphi)}$ è lo \textbf{span delle colonne} di A in $\mathbb{R}^m$            
+            \subsection{Trovare la dimensione}
+            \paragraph{}Per trovare la $\boldsymbol{dim \; Im(\varphi)}$ bisogna determinare la dimensione dello \textbf{span}, ovvero il \textbf{rango}.\\
+            Se $\varphi \text{ ha matrice } A$ allora $\boldsymbol{dim \; Im(\varphi)=rg \; (A)}$
+            \paragraph{Esempio} Sia $\varphi: \mathbb{R}^4\rightarrow \mathbb{R}^3$ della matrice
+            $
+            \begin{bmatrix}
+                1 & 2 & -1 & -2\\
+                1 & 1 & 1 & 1\\
+                1 & 0 & 3 & 4
+            \end{bmatrix}
+            $
+            Trovare $Im(\varphi)$.\\
+            Applichiamo Gauss alla matrice di $\varphi$.
+            $$
+            \rightarrow
+            \begin{bmatrix}
+                1 & 2 & -1 & -2\\
+                0 & -1 & 2 & 3\\
+                0 & -2 & 4 & 6
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                \textcolor{blue}{1} & 2 & -1 & -2\\
+                0 & \textcolor{blue}{-1} & 2 & 3\\
+                0 & 0 & 0 & 0
+            \end{bmatrix}
+            $$
+            Ci sono \textbf{pivots} nelle prime due colonne $\Rightarrow
+            \begin{bmatrix}
+                1\\
+                1\\
+                1
+            \end{bmatrix}
+            ,
+            \begin{bmatrix}
+                2\\
+                1\\
+                0
+            \end{bmatrix}
+            \text{ è la base di }Im(\varphi)$ e il \textbf{rango} è 2.
         \section{Dimensione}
             \paragraph{Teorema} Se $dim \; V_1<\infty$ allora
             $$dim \; Ker(\varphi)+dim \; Im(\varphi)=dim \; V_1$$
@@ -1588,7 +1786,7 @@
                 \item $\varphi(e_1),\dots,\varphi(e_n)$ \textbf{determina} $\boldsymbol{\varphi}$\textbf{ in maniera unica}
                 \item $\forall v$ possiamo calcolare $\varphi(v)=A \cdot v$ dove $A \in M_{mxn} (\mathbb{R})$ è la matrice definita nel punto precedente.
             \end{itemize}
-        \section{Generalizzazione}
+        \section{Matrice associata all'applicazione lineare}
             \paragraph{}Sia $\varphi:V \rightarrow W$ lineare.\\
             Sia $B=\{e_1,\dots,e_n\}$ una base di V [dim V = n]\\
             Sia $B'=\{e_1',\dots,e_m'\}$ una base di W [dim W = m]\\
@@ -1620,4 +1818,196 @@
             \end{bmatrix}
             $$
             dove le \textbf{colonne sono le coordinate di} $\boldsymbol{\varphi(e_i)}$ rispetto a $e_1',\dots,e_m'$.
+            \paragraph{Teorema} Se $v=b_1e_1+\dots+b_ne_n$ è un vettore di V consideriamo il vettore
+            colonna in $\mathbb{R}^n: \;
+            \begin{bmatrix}
+                b_1\\
+                \vdots\\
+                b_n
+            \end{bmatrix}
+            $.\\
+            Allora le coordinate di $\varphi(v)$ rispetto a $B'=\{e_1',\dots,e_m'\}$ sono date dal vettore colonna
+            $$
+            A \cdot
+            \begin{bmatrix}
+                b_1\\
+                \vdots\\
+                b_n    
+            \end{bmatrix}
+            \in \mathbb{R}^m
+            $$
+            \paragraph{Importante} La matrice A è sempre definita con \textbf{due basi} $\boldsymbol{B,B'}$.
+            \paragraph{Esempio}$\varphi: \mathbb{R}^2 \rightarrow \mathbb{R}^2, \; 
+            \varphi \left(
+                \begin{bmatrix}
+                    x\\
+                    y
+                \end{bmatrix}
+            \right)=\left(
+            \begin{matrix}
+                x+2y\\
+                x+2y
+            \end{matrix}\right)
+            $\\
+            Matrice rispetto alla base standard:
+            $$
+            \varphi \left(
+                \begin{bmatrix}
+                    1\\
+                    0
+                \end{bmatrix}
+            \right)=
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            , \varphi \left(
+                \begin{bmatrix}
+                    0\\
+                    1
+                \end{bmatrix}
+            \right)=
+            \begin{bmatrix}
+                2\\
+                2
+            \end{bmatrix}
+            \Rightarrow
+            A=
+            \begin{bmatrix}
+                1 & 2\\
+                1 & 2
+            \end{bmatrix}
+            $$
+            Matrice rispetto alla base 
+            $
+            \begin{bmatrix}
+                1\\
+                0
+            \end{bmatrix}
+            ,
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            \text{di } \mathbb{R}^2
+            $
+            $$
+            \varphi \left(
+                \begin{bmatrix}
+                    1\\
+                    0
+                \end{bmatrix}
+            \right)=
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            =\textcolor{blue}{0} \cdot
+            \begin{bmatrix}
+                1\\
+                0
+            \end{bmatrix}
+            +\textcolor{orange}{1}\cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            $$
+            $$
+            \varphi \left(
+                \begin{bmatrix}
+                    1\\
+                    1
+                \end{bmatrix}
+            \right)=
+            \begin{bmatrix}
+                3\\
+                3
+            \end{bmatrix}
+            =\textcolor{blue}{0} \cdot
+            \begin{bmatrix}
+                1\\
+                0
+            \end{bmatrix}
+            +\textcolor{orange}{3}\cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            $$
+            $$
+            A=
+            \begin{bmatrix}
+                \textcolor{blue}{0} & \textcolor{orange}{0}\\  
+                \textcolor{blue}{1} & \textcolor{orange}{3}    
+            \end{bmatrix}
+            $$
+            Matrice rispetto alla base 
+            $
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            ,
+            \begin{bmatrix}
+                2\\
+                -1
+            \end{bmatrix}
+            \text{di } \mathbb{R}^2
+            $
+            $$
+            \varphi \left(
+                \begin{bmatrix}
+                    1\\
+                    1
+                \end{bmatrix}
+            \right)=
+            \begin{bmatrix}
+                3\\
+                3
+            \end{bmatrix}
+            =\textcolor{blue}{3} \cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            +\textcolor{orange}{0}\cdot
+            \begin{bmatrix}
+                2\\
+                -1
+            \end{bmatrix}
+            $$
+            $$
+            \varphi \left(
+                \begin{bmatrix}
+                    2\\
+                    -1
+                \end{bmatrix}
+            \right)=
+            \begin{bmatrix}
+                0\\
+                0
+            \end{bmatrix}
+            =\textcolor{blue}{0} \cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+            +\textcolor{orange}{0}\cdot
+            \begin{bmatrix}
+                2\\
+                -1
+            \end{bmatrix}
+            $$
+            $$
+            A=
+            \begin{bmatrix}
+                \textcolor{blue}{3} & \textcolor{orange}{0}\\  
+                \textcolor{blue}{0} & \textcolor{orange}{0}    
+            \end{bmatrix}
+            $$
+            Quindi scrivendo le coordinate \textbf{non} rispetto alla base standard ma ad \textbf{altre
+            basi}, $\varphi$ può diventare molto più semplice. Per trovare \textbf{basi ottimali} si utilizzeranno
+            gli \textbf{autovettori}.
+            %-8
 \end{document}

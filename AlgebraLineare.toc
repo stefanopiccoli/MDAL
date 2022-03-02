@@ -48,64 +48,78 @@
 \contentsline {paragraph}{Definizione}{12}{}%
 \contentsline {subsection}{\numberline {2.1.1}Somma}{12}{}%
 \contentsline {subsection}{\numberline {2.1.2}Moltiplicazione}{12}{}%
-\contentsline {section}{\numberline {2.2}Sottospazi vettoriali}{12}{}%
-\contentsline {paragraph}{}{12}{}%
+\contentsline {section}{\numberline {2.2}Sottospazi vettoriali}{13}{}%
+\contentsline {paragraph}{}{13}{}%
 \contentsline {subparagraph}{Esempio}{13}{}%
-\contentsline {chapter}{\numberline {3}Combinazioni lineari}{14}{}%
+\contentsline {section}{\numberline {2.3}Combinazioni lineari}{14}{}%
 \contentsline {paragraph}{}{14}{}%
 \contentsline {subparagraph}{Esempio}{14}{}%
 \contentsline {subparagraph}{}{14}{}%
-\contentsline {chapter}{\numberline {4}Span}{15}{}%
-\contentsline {paragraph}{}{15}{}%
-\contentsline {subparagraph}{Esempi}{15}{}%
-\contentsline {section}{\numberline {4.1}Esercizi}{16}{}%
-\contentsline {paragraph}{Verificare che $\boldsymbol {Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb {R}^3}$}{16}{}%
-\contentsline {paragraph}{In generale}{16}{}%
-\contentsline {paragraph}{Trovare sistema di equazioni lineari omogenee tale che il sottospazio di $\boldsymbol {\mathbb {R}^n \text { associato sia }Span(v_1,\dots ,v_m)}$}{16}{}%
-\contentsline {subparagraph}{Esempio}{17}{}%
-\contentsline {chapter}{\numberline {5}Dipendenza lineare}{18}{}%
+\contentsline {section}{\numberline {2.4}Span}{14}{}%
+\contentsline {paragraph}{}{14}{}%
+\contentsline {subparagraph}{Esempi}{14}{}%
+\contentsline {subsection}{\numberline {2.4.1}Esercizi}{15}{}%
+\contentsline {paragraph}{Verificare che $\boldsymbol {Span(v_1,v_2,v_3)=Span(v_1,v_2,v_3,v_4)=\mathbb {R}^3}$}{15}{}%
+\contentsline {paragraph}{In generale}{15}{}%
+\contentsline {paragraph}{Trovare sistema di equazioni lineari omogenee tale che il sottospazio di $\boldsymbol {\mathbb {R}^n \text { associato sia }Span(v_1,\dots ,v_m)}$}{15}{}%
+\contentsline {subparagraph}{Esempio}{16}{}%
+\contentsline {section}{\numberline {2.5}Dipendenza lineare}{16}{}%
+\contentsline {paragraph}{}{16}{}%
+\contentsline {paragraph}{Geometricamente}{16}{}%
+\contentsline {paragraph}{Proposizione}{17}{}%
+\contentsline {paragraph}{Verificare se m vettori sono linearmente indipendenti}{17}{}%
+\contentsline {paragraph}{Esempio}{17}{}%
+\contentsline {section}{\numberline {2.6}Basi}{18}{}%
 \contentsline {paragraph}{}{18}{}%
-\contentsline {paragraph}{Geometricamente}{18}{}%
-\contentsline {paragraph}{Proposizione}{18}{}%
-\contentsline {paragraph}{Verificare se m vettori sono linearmente indipendenti}{18}{}%
-\contentsline {paragraph}{Esempio}{19}{}%
-\contentsline {chapter}{\numberline {6}Basi}{20}{}%
-\contentsline {paragraph}{}{20}{}%
+\contentsline {paragraph}{Esempio}{18}{}%
+\contentsline {subsection}{\numberline {2.6.1}Coordinate}{18}{}%
+\contentsline {paragraph}{}{18}{}%
+\contentsline {paragraph}{Trovare le coordinate di un vettore rispetto alla base}{18}{}%
+\contentsline {section}{\numberline {2.7}Dimensione}{19}{}%
+\contentsline {subsection}{\numberline {2.7.1}Proprietà}{19}{}%
+\contentsline {paragraph}{}{19}{}%
 \contentsline {paragraph}{Esempio}{20}{}%
-\contentsline {section}{\numberline {6.1}Coordinate}{20}{}%
-\contentsline {paragraph}{}{20}{}%
-\contentsline {paragraph}{Trovare le coordinate di un vettore rispetto alla base}{21}{}%
-\contentsline {chapter}{\numberline {7}Dimensione}{22}{}%
-\contentsline {section}{\numberline {7.1}Proprietà}{22}{}%
-\contentsline {paragraph}{}{22}{}%
+\contentsline {paragraph}{Proposizione}{20}{}%
+\contentsline {paragraph}{Esempio}{21}{}%
+\contentsline {subsection}{\numberline {2.7.2}Sottospazi}{21}{}%
+\contentsline {subsubsection}{Intersezioni di sottospazi}{21}{}%
+\contentsline {paragraph}{}{21}{}%
+\contentsline {subsubsection}{Formula di Grassmann}{21}{}%
+\contentsline {paragraph}{}{21}{}%
+\contentsline {paragraph}{Osservazione}{21}{}%
+\contentsline {paragraph}{Esempio}{21}{}%
+\contentsline {paragraph}{Formula di Grassmann}{21}{}%
 \contentsline {paragraph}{Esempio}{22}{}%
-\contentsline {paragraph}{Proposizione}{23}{}%
-\contentsline {paragraph}{Esempio}{23}{}%
-\contentsline {section}{\numberline {7.2}Sottospazi}{24}{}%
-\contentsline {subsection}{\numberline {7.2.1}Intersezioni di sottospazi}{24}{}%
-\contentsline {paragraph}{}{24}{}%
-\contentsline {subsection}{\numberline {7.2.2}Formula di Grassmann}{24}{}%
-\contentsline {paragraph}{}{24}{}%
-\contentsline {paragraph}{Osservazione}{24}{}%
-\contentsline {paragraph}{Esempio}{24}{}%
-\contentsline {paragraph}{Formula di Grassmann}{24}{}%
-\contentsline {paragraph}{Esempio}{24}{}%
-\contentsline {paragraph}{Soluzione}{25}{}%
-\contentsline {chapter}{\numberline {8}Applicazioni lineari}{27}{}%
-\contentsline {paragraph}{Definizione}{27}{}%
-\contentsline {section}{\numberline {8.1}Kernel}{27}{}%
-\contentsline {paragraph}{}{27}{}%
-\contentsline {paragraph}{Proposizione}{27}{}%
-\contentsline {section}{\numberline {8.2}Immagine}{27}{}%
-\contentsline {paragraph}{}{27}{}%
-\contentsline {paragraph}{Proposizione}{27}{}%
-\contentsline {section}{\numberline {8.3}Dimensione}{27}{}%
+\contentsline {paragraph}{Soluzione}{22}{}%
+\contentsline {section}{\numberline {2.8}Rango}{23}{}%
+\contentsline {paragraph}{}{23}{}%
+\contentsline {subsection}{\numberline {2.8.1}Trovare il rango}{23}{}%
+\contentsline {paragraph}{}{23}{}%
+\contentsline {chapter}{\numberline {3}Applicazioni lineari}{24}{}%
+\contentsline {paragraph}{Definizione}{24}{}%
+\contentsline {section}{\numberline {3.1}Kernel}{25}{}%
+\contentsline {paragraph}{}{25}{}%
+\contentsline {paragraph}{Proposizione}{25}{}%
+\contentsline {subsection}{\numberline {3.1.1}Trovare il Kernel utilizzando la matrice}{25}{}%
+\contentsline {paragraph}{Esempio}{25}{}%
+\contentsline {section}{\numberline {3.2}Immagine}{26}{}%
+\contentsline {paragraph}{}{26}{}%
+\contentsline {paragraph}{Proposizione}{26}{}%
+\contentsline {subsection}{\numberline {3.2.1}Trovare l'immagine utilizzando la matrice}{26}{}%
+\contentsline {paragraph}{}{26}{}%
+\contentsline {subsection}{\numberline {3.2.2}Trovare la dimensione}{26}{}%
+\contentsline {paragraph}{}{26}{}%
+\contentsline {paragraph}{Esempio}{26}{}%
+\contentsline {section}{\numberline {3.3}Dimensione}{27}{}%
 \contentsline {paragraph}{Teorema}{27}{}%
-\contentsline {section}{\numberline {8.4}Prodotto}{28}{}%
-\contentsline {paragraph}{}{28}{}%
-\contentsline {paragraph}{Proposizione}{28}{}%
-\contentsline {paragraph}{Esempio 1}{28}{}%
-\contentsline {paragraph}{Esempio 2}{28}{}%
+\contentsline {section}{\numberline {3.4}Prodotto}{27}{}%
+\contentsline {paragraph}{}{27}{}%
+\contentsline {paragraph}{Proposizione}{27}{}%
+\contentsline {paragraph}{Esempio 1}{27}{}%
+\contentsline {paragraph}{Esempio 2}{27}{}%
 \contentsline {paragraph}{Conclusione}{28}{}%
-\contentsline {section}{\numberline {8.5}Generalizzazione}{29}{}%
-\contentsline {paragraph}{}{29}{}%
+\contentsline {section}{\numberline {3.5}Matrice associata all'applicazione lineare}{28}{}%
+\contentsline {paragraph}{}{28}{}%
+\contentsline {paragraph}{Teorema}{28}{}%
+\contentsline {paragraph}{Importante}{28}{}%
+\contentsline {paragraph}{Esempio}{29}{}%
