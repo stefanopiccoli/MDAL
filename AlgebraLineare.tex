@@ -2009,5 +2009,66 @@
             Quindi scrivendo le coordinate \textbf{non} rispetto alla base standard ma ad \textbf{altre
             basi}, $\varphi$ può diventare molto più semplice. Per trovare \textbf{basi ottimali} si utilizzeranno
             gli \textbf{autovettori}.
-            %-8
-\end{document}
+        \clearpage
+        \section{Isomorfismo}
+        \paragraph{} Un'applicazione lineare $\varphi: V_1 \rightarrow V_2$ è un \textbf{isomorfismo} se 
+        \begin{itemize}
+            \item $Im(\varphi)=V_2$ 
+            \item per $v_1,v_1' \in V_1 \; \varphi(v_1)=\varphi(v_1') \Leftrightarrow v_1=v_1'$. Notazione: $v_1 \tilde{\rightarrow} v_2$
+        \end{itemize}
+        Dunque $\varphi$ è un \textbf{isomorfismo} se $\boldsymbol{\forall \; v_2 \in V_2 \; \exists! v_1 \in V_1:\varphi(v_1)=v_2}$.
+        \paragraph{Osservazione} $\varphi$ è un isomorfismo $\Leftrightarrow Im(\varphi)=V_2, \; Ker(\varphi)=V_1$.
+        \paragraph{Esempio} $V_1=M_{2x2}(\mathbb{R}), V_2=\mathbb{R}^4 \; \; \varphi:M_{2x2}(\mathbb{R})\rightarrow \mathbb{R}^4$
+        $$
+        \begin{bmatrix}
+            a & b\\
+            c & d
+        \end{bmatrix}
+        \rightarrow
+        \begin{bmatrix}
+            a\\
+            b\\
+            c\\
+            d
+        \end{bmatrix}
+        \text{è un \textbf{isomorfismo}.}
+        $$
+        $$
+        \text{Ma anche }
+        \begin{bmatrix}
+            a\\
+            b\\
+            c\\
+            d
+        \end{bmatrix}
+        \rightarrow
+        \begin{bmatrix}
+            a & b\\
+            c & d
+        \end{bmatrix}
+        \text{definisce un \textbf{isomorfismo}. }
+        \psi : \mathbb{R}^4 \rightarrow M_{2x2}(\mathbb{R}).
+        $$
+        \paragraph{Osservazione} Sia V uno spazio vettoriale, $dim \; V=n$ e $B=(e_1,\dots,e_n)$ una base di V.
+        Ogni $v \in V$ si scrive in modo unico come $v=a_1e_1+\dots+a_ne_n$.
+        Allora $v=
+        \begin{bmatrix}
+            a_1\\
+            \vdots\\
+            a_n
+        \end{bmatrix}
+        $ definisce un \textbf{isomorfismo} $V \tilde{\rightarrow}\mathbb{R}^n$.\\
+        Infatti $\varphi$ è lineare, $Im(\varphi)=\mathbb{R}^4, Ker(\varphi)=\{0\}$.
+        \paragraph{Osservazione} Sia $\varphi:V_1 \rightarrow V_2$ una qualsiasi applicazione lineare,\\
+        $dim \; V_1=n,\; dim \; V_2=m$.\\
+        $B=(e_1,\dots,e_n)$ base di $V_1$.\\
+        $B'=(e_1',\dots,e_m')$ base di $V_2$.\\
+        Sia A la matrice di $\varphi$ rispetto a $B \text{ e } B'$.\\
+        B definisce $\psi: V_1 \tilde{\rightarrow}\mathbb{R}^n$.\\
+        $B'$ definisce $\psi': V_2 \tilde{\rightarrow}\mathbb{R}^m$.
+        \subparagraph{Lemma}
+        \begin{itemize}
+            \item $\psi^-1$ induce un \textbf{isomorfismo} $Ker(v\mapsto Av)\tilde{\rightarrow}Ker(\varphi)$
+            \item $\psi'$ induce un \textbf{isomorfismo} $Ker(\varphi)\tilde{\rightarrow}Ker(v\mapsto Av)$
+        \end{itemize}
+        \end{document}
