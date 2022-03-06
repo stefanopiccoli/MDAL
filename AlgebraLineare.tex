@@ -2071,4 +2071,41 @@
             \item $\psi^-1$ induce un \textbf{isomorfismo} $Ker(v\mapsto Av)\tilde{\rightarrow}Ker(\varphi)$
             \item $\psi'$ induce un \textbf{isomorfismo} $Ker(\varphi)\tilde{\rightarrow}Ker(v\mapsto Av)$
         \end{itemize}
-        \end{document}
+        \section{Composizione di funzioni}
+        \paragraph{} Siano $V_1 \xrightarrow[]{\varphi}V_2\xrightarrow[]{\psi}V_3$ applicazioni lineari.\\
+        Allora $\psi \circ \varphi: V_1 \rightarrow V_3$ è \textbf{lineare}.\\
+        Siano\\ 
+        $
+        B_1=(e_1,\dots,e_n) \text{ base di } V_1
+        $\\$
+        B_2=(f_1,\dots,f_n) \text{ base di } V_2
+        $\\$        
+        B_3=(g_1,\dots,g_n) \text{ base di } V_3
+        $
+        \\Siano\\
+        $
+        B= \text{ matrice di } \varphi \text{ rispetto a } B_1,B_2
+        $\\$
+        A= \text{ matrice di } \psi \text{ rispetto a } B_2,B_3
+        $\\
+        Allora la matrice di $\boldsymbol{\psi \circ \varphi}$ rispetto a $B_1,B_3$ è $\boldsymbol{A \cdot B}$. 
+        \section{Proprietà della moltiplicazione}
+        \begin{enumerate}
+            \item $A(BC) = (AB)C$
+            \item $A\cdot B =B \cdot A$ \textbf{non è vero in generale}
+            \item Sia $I=
+            \begin{bmatrix}
+                1 & & 0\\
+                &\ddots\\
+                0 & & 1
+            \end{bmatrix}
+            $ la matrice \textbf{identità} di $M_{mxn}(\mathbb{R})$. Allora\\
+            $\forall A \in M_{nxn}(\mathbb{R}): \; \boldsymbol{I \cdot A = A \cdot I = A}$
+            \item Se $\varphi : V_1 \tilde{\rightarrow}V_2$ isomorfismo $\Rightarrow \exists \; \varphi^{-1}:V_2 \tilde{\rightarrow}V_1$
+            tale che $\varphi \circ \varphi^{-1}= id_{V_2}$ e $\varphi^{-1} \circ \varphi= id_{V_1}$\footnote{id=identità}.\\
+            Se fissiamo le basi \\$B_1$ di $V_1,$ $B_2 $ di $V_2,$ $\varphi$ ha matrice $A$ e $\varphi^{-1}$ ha matrice $A^{-1} \Rightarrow 
+            $ $$\boldsymbol{A \cdot A^{-1} = I$, $A^{-1} \cdot A =I}$$ 
+            \item \textbf{Matrice inversa:} Esiste \textbf{solo} se è la matrice di $\varphi$ isomorfismo.
+        \end{enumerate}
+        %RIFLESSIONI GEOMETRIA PIANA FINE LEZIONE 13
+\end{document}

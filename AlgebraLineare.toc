@@ -130,3 +130,6 @@
 \contentsline {paragraph}{Osservazione}{30}{}%
 \contentsline {paragraph}{Osservazione}{30}{}%
 \contentsline {subparagraph}{Lemma}{30}{}%
+\contentsline {section}{\numberline {3.7}Composizione di funzioni}{31}{}%
+\contentsline {paragraph}{}{31}{}%
+\contentsline {section}{\numberline {3.8}Proprietà della moltiplicazione}{31}{}%
