@@ -2108,4 +2108,222 @@
             \item \textbf{Matrice inversa:} Esiste \textbf{solo} se è la matrice di $\varphi$ isomorfismo.
         \end{enumerate}
         %RIFLESSIONI GEOMETRIA PIANA FINE LEZIONE 13
+        \clearpage
+        \section{Cambiamento di base}
+        \paragraph{}Sia V uno spazio vettoriale di dim n e $B, B'$ due basi.\\
+        La \textbf{matrice di cambiamento di base} rispetto a ($B,B'$) è definita da\footnote{$id_V$ che va da B a $B'$} $$\boldsymbol{P:=[id_V]^{B'}_B}$$
+        \paragraph{Esempio} Siano $V=\mathbb{R}^2, B=\left \{
+        \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix},
+        \begin{bmatrix}
+            0\\
+            1
+        \end{bmatrix}
+        \right\}
+        ,B'=
+        \left\{
+        \begin{bmatrix}
+            2\\
+            1    
+        \end{bmatrix}
+        ,\begin{bmatrix}
+            1\\
+            1
+        \end{bmatrix}
+        \right\} \\ \varphi: v \mapsto A \cdot v$, dove $A=
+        \begin{bmatrix}
+            2 & -2\\
+            1 & -1
+        \end{bmatrix}$ Allora:\\
+        $[\varphi]_B=A$, calcoliamo $[\varphi]_{B'}$:
+        $$
+        \varphi\left(
+            \begin{bmatrix}
+                2\\
+                1
+            \end{bmatrix}\right)=
+            \begin{bmatrix}
+                2 & -2\\
+                1 & -1
+            \end{bmatrix}\cdot
+            \begin{bmatrix}
+                2\\
+                1
+            \end{bmatrix}=
+            \begin{bmatrix}
+                2\\
+                1
+            \end{bmatrix}
+            =1 \cdot
+            \begin{bmatrix}
+                2\\
+                1
+            \end{bmatrix}
+            +0\cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+        $$
+        $$
+        \varphi\left(
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}\right)=
+            \begin{bmatrix}
+                2 & -2\\
+                1 & -1
+            \end{bmatrix}\cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}=
+            \begin{bmatrix}
+                0\\
+                0
+            \end{bmatrix}
+            =0 \cdot
+            \begin{bmatrix}
+                2\\
+                1
+            \end{bmatrix}
+            +0\cdot
+            \begin{bmatrix}
+                1\\
+                1
+            \end{bmatrix}
+        $$
+        Quindi $[\varphi]_{B'}=
+        \begin{bmatrix}
+            1 & 0\\
+            0 & 0
+        \end{bmatrix}$\\
+        \textbf{Calcoliamo ora} $\boldsymbol{P=[id_V]^{B'}_B}$\\
+        Calcoliamo con Gauss la \textbf{matrice del cambiamento di base}.
+        Scriviamo la base B usando le coordinate della base $B'$.
+        $$
+        \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix}
+        = 1 \cdot 
+        \begin{bmatrix}
+            2\\
+            1
+        \end{bmatrix}
+        +(-1)\cdot
+        \begin{bmatrix}
+            1\\
+            1
+        \end{bmatrix}
+        $$
+        $$
+        \begin{bmatrix}
+            0\\
+            1
+        \end{bmatrix}
+        = (-1) \cdot 
+        \begin{bmatrix}
+            2\\
+            1
+        \end{bmatrix}
+        +2\cdot
+        \begin{bmatrix}
+            1\\
+            1
+        \end{bmatrix}
+        $$
+        $$\boldsymbol{P=
+        \begin{bmatrix}
+            1 & -1\\
+            -1 & 2
+        \end{bmatrix}} \text{ è la \textbf{matrice del cambio di base} da \textbf{B} a }\boldsymbol{B'} $$
+        $$
+        \footnote{Usando lo stesso metodo ma è banale poiché B, ovvero la base di destinazione, è la matrice identità}
+        \boldsymbol{
+        \begin{bmatrix}
+            2 & 1\\
+            1 & 1
+        \end{bmatrix}}
+        \text{ è la \textbf{matrice di cambio di base} da } \boldsymbol{B'} \text{ a \textbf{B}}  
+        $$
+        Si nota che:
+        $$
+        \begin{bmatrix}
+            2 & 1\\
+            1 & 1
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            1 & -1\\
+            -1 & 2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            1 & 0\\
+            0 & 1
+        \end{bmatrix}
+        $$
+        \paragraph{In generale} $[id_V]^B_{B'}= [id_V]^{B'}_B=[id_V \circ id_V]_B=[id_V]_B$ è la \textbf{matrice identità}.\\
+        Quindi $\boldsymbol{P=[id_V]^{B'}_B}$ è \textbf{invertibile} e $\boldsymbol{P^{-1}=[id_V]^B_{B'}}$
+        \paragraph{Teorema} Se $B, B'$ sono due basi di V, P matrice di cambiamento di base.
+        $\varphi: V \rightarrow V$ applicazione lineare con $A=[\varphi]_B$ allora $[\varphi]_{B'}=PAP^{-1}$
+        \subparagraph{Esempio} Con l'esempio precedente:
+        $$
+        PAP^{-1}= 
+        \begin{bmatrix}
+            1 & -1\\
+            -1 & 2
+        \end{bmatrix}
+        \begin{bmatrix}
+            2 & -2\\
+            1 & -1
+        \end{bmatrix}
+        \begin{bmatrix}
+            2 & 1\\
+            1 & 1
+        \end{bmatrix}
+        =\begin{bmatrix}
+            1 & 0\\
+            0 & 0
+        \end{bmatrix}
+        $$
+    \section{Il determinante}
+    \paragraph{} Il \textbf{determinante} sarà un funzione $\boldsymbol{det:M_{nxn}(\mathbb{R})\rightarrow \mathbb{R}}$ con la proprietà fondamentale:
+    \begin{itemize}
+        \item $det(A)=0 \Leftrightarrow$ le righe di A sono \textbf{linearmente indipendenti}
+        \item $det(A)=0 \Leftrightarrow$ le colonne di A sono \textbf{linearmente indipendenti}
+    \end{itemize}
+    \paragraph{Esempi}
+    \begin{itemize}
+        \item $n=1 \;\; A=[a] \;\; det(A)=a$
+        \item $n=2 \;\; A=
+        \begin{bmatrix}
+            a & b\\
+            c & d
+        \end{bmatrix}
+        \;\; det(A)=ad- bc$
+    \end{itemize}
+    \paragraph{Geometricamente} 
+    $$
+    det
+    \begin{bmatrix}
+        a & b\\
+        c & d
+    \end{bmatrix}
+    = \text{\textbf{area del parallelogramma} costruito sui lati }
+    \begin{bmatrix}
+        a\\
+        c
+    \end{bmatrix}
+    ,
+    \begin{bmatrix}
+        b\\
+        d
+    \end{bmatrix}
+    $$
+    %GEOMETRIE E DIMOSTRAZIONI LEZIONE 15
 \end{document}
