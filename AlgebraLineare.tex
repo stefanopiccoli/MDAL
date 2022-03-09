@@ -2291,7 +2291,7 @@
             0 & 0
         \end{bmatrix}
         $$
-    \section{Il determinante}
+    \section{Determinante}
     \paragraph{} Il \textbf{determinante} sarà un funzione $\boldsymbol{det:M_{nxn}(\mathbb{R})\rightarrow \mathbb{R}}$ con la proprietà fondamentale:
     \begin{itemize}
         \item $det(A)=0 \Leftrightarrow$ le righe di A sono \textbf{linearmente indipendenti}
@@ -2326,4 +2326,72 @@
     \end{bmatrix}
     $$
     %GEOMETRIE E DIMOSTRAZIONI LEZIONE 15
+    \paragraph{Definizione generale} Per induzione su n-1, sapendo n=1,2:\\
+    Per $A=[a_{ij}] \text{ sia } A_{ij}$ la matrice ottenuta cancellando la riga i e la colonna j:
+        \begin{itemize}
+            \item $\sum_{j} \; (-1)^{i+j} \; a_{ij} \; det(A_{ij}) \; \;$per i fisso (\textbf{sviluppo secondo la riga i})
+            \item $\sum_{i} \; (-1)^{i+j} \; a_{ij} \; det(A_{ij}) \; \;$per j fisso (\textbf{sviluppo secondo la colonna j})
+        \end{itemize}
+    \textbf{Il risultato sarà uguale per entrambe le formule} e per qualsiasi i,j scelto.
+    \paragraph{Promemoria per i segni}
+    $$
+    (-1)^{i+j}:
+    \begin{bmatrix}
+        + & - & + & - & + & - & \dots\\
+        - & + & - & + & - & + & \dots\\
+        + & - & + & - & + & - & \dots\\
+        - & + & - & + & - & + & \dots\\
+        \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+    \end{bmatrix}
+    $$
+    \paragraph{Esempio} Per n=3:
+    $$
+    A=
+    \begin{bmatrix}
+        1 & 0 & -1\\
+        2 & 1 & 0\\
+        -1 & 0 & 2
+    \end{bmatrix}
+    $$
+    Sviluppo secondo la prima riga:
+    $$
+    1
+    \begin{bmatrix}
+        1 & 0\\
+        0 & 2
+    \end{bmatrix}
+    - 0 + (-1)
+    \begin{bmatrix}
+        2 & 1\\
+        1 & 0
+    \end{bmatrix}
+    =2-(-1)=\boldsymbol{3}
+    $$
+    Sviluppo secondo la seconda colonna:
+    $$
+    0 + 1 
+    \begin{bmatrix}
+        1 & -1\\
+        1 & 2
+    \end{bmatrix}
+    + 0=2+1=\boldsymbol{3}
+    $$
+    \paragraph{Esempio} Matrice triangolare superiore ovvero $a_{ij}=0$ se i>j.
+    $$
+    A=
+    \begin{bmatrix}
+        a_{11}&*&*&*\\
+        0&a_{22}&*&*\\
+        0&0&\ddots&*\\
+        0&0&0&a_{nn}
+    \end{bmatrix}
+    $$
+    $$det(A)=\prod_{i=1}^{n}a_{ij}$$
+    \subsection{Effetto del determinante sulle operazioni elementari di Gauss}
+    \begin{enumerate}
+        \item \textbf{Scambio di due righe}
+            \subitem \textbf{adiacenti}: $\boldsymbol{det(A)\rightarrow -det(A)}$
+            \subitem \textbf{scambio tra riga i e j qualsiasi}: si eseguono cambi successivi adiacenti.
+        \item Sostituzione della riga $\boldsymbol{R_i$ con $R_i+\lambda R_j} (j \neq i)$: \textbf{det(A) non cambia}
+    \end{enumerate}
 \end{document}

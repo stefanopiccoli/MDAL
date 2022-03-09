@@ -139,7 +139,12 @@
 \contentsline {paragraph}{In generale}{33}{}%
 \contentsline {paragraph}{Teorema}{33}{}%
 \contentsline {subparagraph}{Esempio}{33}{}%
-\contentsline {section}{\numberline {3.10}Il determinante}{33}{}%
+\contentsline {section}{\numberline {3.10}Determinante}{33}{}%
 \contentsline {paragraph}{}{33}{}%
 \contentsline {paragraph}{Esempi}{33}{}%
 \contentsline {paragraph}{Geometricamente}{33}{}%
+\contentsline {paragraph}{Definizione generale}{33}{}%
+\contentsline {paragraph}{Promemoria per i segni}{34}{}%
+\contentsline {paragraph}{Esempio}{34}{}%
+\contentsline {paragraph}{Esempio}{34}{}%
+\contentsline {subsection}{\numberline {3.10.1}Effetto del determinante sulle operazioni elementari di Gauss}{34}{}%
