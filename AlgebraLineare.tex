@@ -2394,4 +2394,63 @@
             \subitem \textbf{scambio tra riga i e j qualsiasi}: si eseguono cambi successivi adiacenti.
         \item Sostituzione della riga $\boldsymbol{R_i$ con $R_i+\lambda R_j} (j \neq i)$: \textbf{det(A) non cambia}
     \end{enumerate}
+    \subsection{Teoremi}
+    \paragraph{Teorema} Se $A,B \in M_{nxn}(\mathbb{R})$ $$det(A \cdot B)= det(A) \cdot det(B)$$  
+    \paragraph{Corollario} Se $A \in M_{nxn}(\mathbb{R})$ $$A^{-1} \text{ esiste} \Leftrightarrow det(A)\neq 0 \text{ allora } det(A^{-1})=\frac{1}{det(A)})$$
+    \paragraph{Proposizione} Sia $\varphi: V \rightarrow V$ una mappa lineare, $B,B'$ due basi di V, A la matrice di $\varphi$ rispetto a B, $A'$ la matrice di $\varphi$ rispetto a $B'$.
+    $$det(A)=det(A')$$
+    Quindi $\boldsymbol{det(A)}$ \textbf{dipende solo da} $\boldsymbol{\varphi}$ e non dalla base.
+    \paragraph{Corollario} Se $\varphi: V \rightarrow V$ è un'applicazione lineare, A la matrice di $\varphi$ rispetto ad una qualsiasi base
+    $$Ker(\varphi)\neq 0 \Leftrightarrow Im(\varphi)\neq V \Leftrightarrow det(A)=0$$
+    \subsection{Formula di Cramer}
+    \paragraph{Definizione} Se $A \in M_{nxn}(\mathbb{R})$, la matrice \textbf{aggiunta} di A è $$\boldsymbol{\tilde{A}=[\tilde{a}_{ij}]} \text{ dove }
+    \boldsymbol{\tilde{a}_{ij}=(-1)^{i+j} \; det(A_{ji})}$$ 
+    \paragraph{Formula di Cramer}$$\boldsymbol{A \cdot \tilde{A}=det(A) \cdot I}$$
+    dove $I \in M_{nxn}\mathbb{R}$ è la matrice identità.
+    \paragraph{Corollario} Se $det(A)\neq 0$,$$\boldsymbol{A^{-1}= \frac{1}{det(A)}\cdot \tilde{A}}$$
+    \paragraph{Esempio}Per n=2
+    $$
+    A=
+    \begin{bmatrix}
+        a & b\\
+        c & d    
+    \end{bmatrix}
+    \rightarrow
+    \tilde{A}=
+    \begin{bmatrix}
+        d & -b\\
+        -c & a
+    \end{bmatrix}
+    $$
+    \paragraph{Esempio} Per n=3
+    $$A=
+    \begin{bmatrix}
+        1 & 0 & 3\\
+        0 & 2 & 0\\
+        4 & 0 & 1
+    \end{bmatrix}
+    \; \; \; det(A)= 2 
+    \begin{bmatrix}
+        1 & 3\\
+        4 & 1
+    \end{bmatrix}
+    =-22
+    $$
+    $det(A)\neq 0 \Rightarrow \exists \; A^{-1}$
+    $$
+    \tilde{A}=
+    \begin{bmatrix}
+        2 & 0 & -6\\
+        0 & -11 & 0\\
+        -8 & 0 & 2
+    \end{bmatrix}
+    $$
+    $$
+    A^{-1}=-\frac{1}{22} \cdot \tilde{A}=
+    \begin{bmatrix}
+        -\frac{1}{11} & 0 & \frac{3}{11}\\
+        0 & \frac{1}{2} & 0\\
+        \frac{4}{11} & 0 & -\frac{1}{11}
+    \end{bmatrix}
+    $$
 \end{document}
