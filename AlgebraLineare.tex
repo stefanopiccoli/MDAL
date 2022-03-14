@@ -2453,4 +2453,49 @@
         \frac{4}{11} & 0 & -\frac{1}{11}
     \end{bmatrix}
     $$
+    \chapter{Autovalori ed Autovettori}
+        \paragraph{Definizione} Sia V uno spazio vettoriale su $\mathbb{R}$, $dim \; V < \infty,\; \varphi: V \rightarrow V$ applicazione lineare.\\
+        $\lambda \in \mathbb{R}$ è un \textbf{autovalore} di $\varphi$ se $\exists \; v \neq 0 \in V: \boldsymbol{\varphi(v)=\lambda \cdot v}$.\\
+        In questo caso v è un \textbf{autovettore} associato a $\lambda$.
+        \paragraph{Osservazioni}
+        \begin{itemize}
+            \item \textbf{v può essere autovettore per un solo} $\boldsymbol{\lambda}$
+            \item $\boldsymbol{\lambda}$ \textbf{può essere autovalore di molti vettori} 
+        \end{itemize}
+        \paragraph{Proposizione}
+        \begin{itemize}
+            \item Se $\lambda \in \mathbb{R}$, gli autovettori per $\lambda$ formano un sottospazio di V:$$\boldsymbol{V_{\lambda}} \text{ \textbf{Autospazio}}$$
+            \item Se $\lambda_1 \neq \lambda_2, \; V_{\lambda_1} \cap V_{\lambda_2}=(0)$
+        \end{itemize}
+        \section{Autovalore}
+            \paragraph{}$\boldsymbol{\lambda}$ \textbf{autovalore} di $\varphi \Leftrightarrow Ker(\varphi-\lambda\cdot id)\neq 0$
+            \\Ma se A è la matrice di $\varphi$ rispetto ad una base $\Rightarrow
+            A-\lambda I$ è la matrice di $\varphi-\lambda \cdot id$.\\
+            $Ker(\varphi-\lambda \cdot id)\neq 0 \Leftrightarrow Ker(A-\lambda I)\neq 0 \Leftrightarrow$ $$\boldsymbol{det(A-\lambda I)=0}$$
+            \paragraph{Definizione}Se $A \in M_{nxn} (\mathbb{R})$, il \textbf{polinomio caratteristico} di A è:
+            $$\boldsymbol{P_A(t):= det(A-t\cdot I) \in \mathbb{R}[t]}$$
+            dove t è una variabile.
+            \paragraph{Conclusione}$\lambda$ è \textbf{autovalore} di $\boldsymbol{\varphi} \Leftrightarrow \boldsymbol{\lambda}$ \textbf{radice} di $\boldsymbol{P_A(t)}$\\
+            dove A è matrice di $\varphi$ rispetto ad una base.
+        \section{Diagonalizzazione}
+            \paragraph{Definizione}$\varphi$ è \textbf{diagonalizzabile} se $\exists$ una base di V dove la matrice di $\varphi$ è diagonale.
+            \paragraph{Proposizione}$\varphi$ è \textbf{diagonalizzabile} $\Leftrightarrow \exists$ base di V costituita di \textbf{autovettori} di $\varphi$.
+            \paragraph{Proposizione}Se $\lambda_1,\dots,\lambda_n$ sono \textbf{autovalori distinti} di $\varphi$, $v_i$
+            \textbf{autovettore} associato a $\lambda_i$ dove $i=1,\dots,n \Rightarrow v_1,\dots,v_n$ sono \textbf{linearmente indipendenti}
+            \paragraph{Corollario}
+            \begin{enumerate}
+                \item Ci sono un \textbf{numero finito} di \textbf{autovalori} distinti perché $dim \; V < \infty$.
+                \item $\boldsymbol{\varphi}$ é \textbf{diagonalizzabile} $\Leftrightarrow$ se $\lambda_1,\dots,\lambda_n$ sono gli autovalori distinti di $\varphi$ allora
+                $$dim \; V_{\lambda_1} + dim \; V_{\lambda_2}+\dots+dim \; V_{\lambda_n}= dim \; V$$
+                \item Se $\boldsymbol{n=dim \; V$ e $\varphi}$ ha \textbf{n autovalori distinti} $\Rightarrow \boldsymbol{\varphi}$ è \textbf{diagonalizzabile}
+            \end{enumerate}
+            \subsection{Definire se $\boldsymbol{\varphi}$ è diagonalizzabile}
+            \begin{enumerate}
+                \item Trovare gli \textbf{autovalori}
+                    \subitem Se ci sono n=dim V \textbf{distinti} $\Rightarrow$ \textbf{diagonalizzabile} 
+                \item Trovare gli \textbf{autovettori} per ogni $\boldsymbol{\lambda_i}$ e calcolare $\boldsymbol{dim \; V_{\lambda_i}}$.
+                    \subitem Se $\sum_i \; dim \; V_{\lambda_i}= dim \; V \Rightarrow$ è \textbf{diagonalizzabile}
+                    \subitem Se $\sum_i \; dim \; V_{\lambda_i}< dim \; V \Rightarrow$ \textbf{NON} è \textbf{diagonalizzabile}
+            \end{enumerate}
+
 \end{document}

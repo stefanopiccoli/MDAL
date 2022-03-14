@@ -159,3 +159,17 @@
 \contentsline {paragraph}{Corollario}{35}{}%
 \contentsline {paragraph}{Esempio}{35}{}%
 \contentsline {paragraph}{Esempio}{36}{}%
+\contentsline {chapter}{\numberline {4}Autovalori ed Autovettori}{37}{}%
+\contentsline {paragraph}{Definizione}{37}{}%
+\contentsline {paragraph}{Osservazioni}{37}{}%
+\contentsline {paragraph}{Proposizione}{37}{}%
+\contentsline {section}{\numberline {4.1}Autovalore}{37}{}%
+\contentsline {paragraph}{}{37}{}%
+\contentsline {paragraph}{Definizione}{38}{}%
+\contentsline {paragraph}{Conclusione}{38}{}%
+\contentsline {section}{\numberline {4.2}Diagonalizzazione}{38}{}%
+\contentsline {paragraph}{Definizione}{38}{}%
+\contentsline {paragraph}{Proposizione}{38}{}%
+\contentsline {paragraph}{Proposizione}{38}{}%
+\contentsline {paragraph}{Corollario}{38}{}%
+\contentsline {subsection}{\numberline {4.2.1}Definire se $\boldsymbol {\varphi }$ è diagonalizzabile}{38}{}%
