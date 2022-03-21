@@ -2467,6 +2467,7 @@
             \item Se $\lambda \in \mathbb{R}$, gli autovettori per $\lambda$ formano un sottospazio di V:$$\boldsymbol{V_{\lambda}} \text{ \textbf{Autospazio}}$$
             \item Se $\lambda_1 \neq \lambda_2, \; V_{\lambda_1} \cap V_{\lambda_2}=(0)$
         \end{itemize}
+        \clearpage
         \section{Autovalore}
             \paragraph{}$\boldsymbol{\lambda}$ \textbf{autovalore} di $\varphi \Leftrightarrow Ker(\varphi-\lambda\cdot id)\neq 0$
             \\Ma se A è la matrice di $\varphi$ rispetto ad una base $\Rightarrow
@@ -2477,6 +2478,23 @@
             dove t è una variabile.
             \paragraph{Conclusione}$\lambda$ è \textbf{autovalore} di $\boldsymbol{\varphi} \Leftrightarrow \boldsymbol{\lambda}$ \textbf{radice} di $\boldsymbol{P_A(t)}$\\
             dove A è matrice di $\varphi$ rispetto ad una base.
+            $$
+            A=
+            \begin{bmatrix}
+                a_{11}& \dots&a_{1n}\\
+                a_{21}& \dots&a_{2n}\\
+                \vdots& \vdots & \vdots\\
+                a_{n1}&\dots&a_{nn}
+            \end{bmatrix}
+            \Rightarrow
+            \begin{bmatrix}
+                \textcolor{blue}{a_{11}-t} & a_{12} & \dots & a_{1n}\\
+                a_{21} & \textcolor{blue}{a_{22}-t} & \dots & a_{2n}\\
+                \vdots & \vdots & \textcolor{blue}{\ddots} & \vdots\\
+                a_{n1} & a_{22}-t & \dots & \textcolor{blue}{a_{nn}-t}\\
+            \end{bmatrix}
+            $$
+        \clearpage
         \section{Diagonalizzazione}
             \paragraph{Definizione}$\varphi$ è \textbf{diagonalizzabile} se $\exists$ una base di V dove la matrice di $\varphi$ è diagonale.
             \paragraph{Proposizione}$\varphi$ è \textbf{diagonalizzabile} $\Leftrightarrow \exists$ base di V costituita di \textbf{autovettori} di $\varphi$.
@@ -2497,5 +2515,277 @@
                     \subitem Se $\sum_i \; dim \; V_{\lambda_i}= dim \; V \Rightarrow$ è \textbf{diagonalizzabile}
                     \subitem Se $\sum_i \; dim \; V_{\lambda_i}< dim \; V \Rightarrow$ \textbf{NON} è \textbf{diagonalizzabile}
             \end{enumerate}
-
+                    \subsubsection{Molteplicità}
+                    \paragraph{Definizione}Sia $\lambda$ un autovalore di $\varphi$.\\
+                    La \textbf{molteplicità algebrica} di $\lambda$ è la molteplicità di $\lambda$ come radice di $P_A(t)$.
+                    La \textbf{molteplicità geometrica} di $\lambda$ è $dim \; V_\lambda$.
+                    \paragraph{Proposizione} \textbf{Molteplicità geometrica di} $\boldsymbol{\lambda \leq}$ \textbf{molteplicità algebrica di} $\boldsymbol{\lambda}$.
+                    \paragraph{Conclusione} $\boldsymbol{\varphi}$ \textbf{è diagonalizzabile} $\boldsymbol{\Leftrightarrow \forall}$ \textbf{autovalore} $\boldsymbol{\lambda}$ di $\boldsymbol{\varphi}$ è \textbf{reale} e \textbf{molteplicità algebrica = molteplicità geometrica}.\\[10px]
+                    In particolare se troviamo $\boldsymbol{\lambda}$ con \textbf{molteplicità geometrica} $\boldsymbol{<}$ \textbf{molteplicità algebrica} $\Rightarrow \varphi$ \textbf{non} è \textbf{diagonalizzabile}.
+                    \paragraph{Esempio} Determinare se la matrice $A=
+                    \begin{bmatrix}
+                        0 & 3 & 0\\
+                        1 & -2 & 0\\
+                        1 & -3 & 1
+                    \end{bmatrix}$ è diagonalizzabile.\\
+                    $P_A(t)= det 
+                    \begin{bmatrix}
+                        -t & 3 & 0\\
+                        1 & -2t & 0\\
+                        1 & -3 & 1-t
+                    \end{bmatrix}
+                    =(1-t)\begin{bmatrix}
+                        -t & 3\\
+                        1 & -2-t
+                    \end{bmatrix}
+                    =$\\$(1-t)(t^2+2t-3)=(1-t)(t-1)(t+3)=(t-1)^2(t+3)
+                    $\\
+                    \textbf{Autovalori}: 1,-3,1\\
+                    \textbf{Autovettori} per \textbf{1}:
+                    $\begin{bmatrix}
+                        0 & 3 & 0\\
+                        1 & -2 & 0\\
+                        1 & -3 & 1
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix}
+                    =\begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix}
+                    \Rightarrow
+                    \begin{cases}
+                        3y=x\\
+                        x-2y=y\\
+                        x-3y+z=z
+                    \end{cases}
+                    $\\
+                    $x=3y \Rightarrow dim(V_1)=2$\\
+                    Una base di $V_1: 
+                    \begin{bmatrix}
+                        3\\
+                        1\\
+                        0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        3\\
+                        1\\
+                        1
+                    \end{bmatrix}$\\
+                    \textbf{Autovettori} per \textbf{-3}:
+                    $\begin{bmatrix}
+                        0 & 3 & 0\\
+                        1 & -2 & 0\\
+                        1 & -3 & 1
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix}
+                    =\begin{bmatrix}
+                        -3x\\-3y\\-3z
+                    \end{bmatrix}
+                    \Rightarrow
+                    \begin{cases}
+                        3y=-3x\\
+                        x-2y=-3y\\
+                        x-3y+z=-3z
+                    \end{cases}
+                    $\\
+                    $x=-y,-4y=-4z \Rightarrow x=-y=-z \Rightarrow dim(V_{-3})=1$\\
+                    Una base di $V_{-3}: 
+                    \begin{bmatrix}
+                        -1\\
+                        1\\
+                        1
+                    \end{bmatrix}$\\
+                    \textbf{A è diagonalizzabile} nella base $
+                    \begin{bmatrix}
+                        3\\
+                        1\\
+                        0
+                    \end{bmatrix},
+                    \begin{bmatrix}
+                        3\\
+                        1\\
+                        1
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                        -1\\
+                        1\\
+                        1
+                    \end{bmatrix}$ dove diventa $
+                    \begin{bmatrix}
+                        1 & 0 & 0\\
+                        0 & 1 & 0\\
+                        0 & 0 & -3
+                    \end{bmatrix}
+                    $
+                    \clearpage
+            \section{Numeri complessi}
+                \paragraph{}Un \textbf{numero complesso} è un'espressione $z=a+bi$ dove $a,b \in \mathbb{R}$ ed \textbf{i} è un parametro formale con la proprietà $\boldsymbol{i^2=1}$.\\
+                Ogni $a \in \mathbb{R}$ è anche un numero complesso: $a=a+0i$.
+                \paragraph{Notazione} $\mathbb{C}$ è l'insieme dei \textbf{numeri complessi}.
+                \paragraph{Osservazione} Se $\Delta \in \mathbb{R}, \Delta < 0, (\sqrt{-\Delta}\;i)^2=\Delta \Rightarrow$\\
+                $\boldsymbol{\forall}$ polinomio $\boldsymbol{ax^2+bx+c \in \mathbb{R}[x]}$ ha \textbf{radici} in $\boldsymbol{\mathbb{C}}$.
+                \paragraph{Teorema}Ogni polinomio $f \in \mathbb{C}[x]$ a coefficienti \textbf{complessi} ammette una radice in $\mathbb{C}$.
+                \paragraph{Definizione} Se $z=a+bi \in \mathbb{C}$, il suo \textbf{coniugato} è $\boldsymbol{\overline{z}=a-bi}$.
+                \paragraph{Teorema}Se $f \in \mathbb{R}, z \in \mathbb{C}$ tale che $f(z)=0 \Rightarrow$ anche $\boldsymbol{f(\overline{z})=0}$.\\
+                Quindi le \textbf{radici} di $\boldsymbol{f \in \mathbb{R}[x]}$ sono \textbf{reali} o \textbf{coppie di numeri complessi coniugati}.
+                \subsection{Operazioni}
+                \begin{itemize}
+                    \item Se $z=a+bi, \; z'=a'+b'i$
+                    \item Se $\lambda \in \mathbb{R}$
+                \end{itemize}
+                \paragraph{Somma}         
+                $$\boldsymbol{z+z'=(a+a')+(b+b')i}$$                
+                \paragraph{Prodotto con scalare}
+                $$\boldsymbol{\lambda z=\lambda(a+bi)=\lambda a+\lambda bi}$$
+                \paragraph{Prodotto di numeri complessi}
+                $$\boldsymbol{z \cdot z'=(a+bi)(a'+b'i)=(aa'-bb')+(ab'+a'b)i}$$
+        \chapter{Prodotto scalare}
+        \paragraph{}Siano $
+        v=
+        \begin{bmatrix}
+            a_1\\
+            \vdots\\
+            a_n
+        \end{bmatrix},
+        w=
+        \begin{bmatrix}
+            b_1\\
+            \vdots\\
+            b_n
+        \end{bmatrix}
+        $ due vettori in $\mathbb{R}^2$.\\
+        Il loro \textbf{prodotto scalare} è $\boldsymbol{\langle v,w\rangle:=a_1b_1+\dots+a_nb_n \in \mathbb{R}}$.\\
+        $\langle , \rangle: \mathbb{R}^n \cdot \mathbb{R}^n \rightarrow \mathbb{R}$ si chiama \textbf{prodotto scalare standard}.
+        \subsection{Proprietà}
+        \begin{enumerate}
+            \item $\langle v,w\rangle=\langle w,v\rangle \; \forall \; v,w \in \mathbb{R}^n$
+            \item Per $v \in \mathbb{R}$ \textbf{fisso}, la funzione $w\mapsto \langle v,w\rangle \in \mathbb{R}$ è un'\textbf{applicazione lineare} $\mathbb{R} \rightarrow \mathbb{R}^n$.\\
+            Per $w \in \mathbb{R}$ \textbf{fisso}, la funzione $v\mapsto \langle v,w\rangle \in \mathbb{R}$ è un'\textbf{applicazione lineare} $\mathbb{R} \rightarrow \mathbb{R}^n$.
+            \item $\forall \; v \in \mathbb{R}^n \; \boldsymbol{\langle v,v \rangle \geq 0}$ e $\boldsymbol{\langle v,v \rangle =0 \Leftrightarrow v=0}$
+        \end{enumerate}
+        \paragraph{Definizione} Se $v \in \mathbb{R}^n$, la sua \textbf{norma} è $\boldsymbol{||v||:=\sqrt{\langle v,v\rangle}}$
+    \chapter{Ortogonalità e ortonormalità}
+        \paragraph{Definizione} $v,w \in \mathbb{R}^n$ sono \textbf{ortogonali} se $\boldsymbol{\langle v,w \rangle=0}$\\
+        Un \textbf{sistema} $v_1,\dots,v_n$ è un \textbf{sistema ortogonale} se $\boldsymbol{\langle v_i,v_j \rangle = 0 \; \forall i\neq j}$. 
+        Un \textbf{sistema} $v_1,\dots,v_n$ è un \textbf{sistema ortonormale} se è \textbf{ortonormale e} $\boldsymbol{\langle v_i,v_i \rangle =1 \; \forall i}$
+        \paragraph{Proposizione} Un \textbf{sistema ortogonale} di vettori è \textbf{linearmente indipendente}.
+        \paragraph{Osservazione} Sia $v \in \mathbb{R}^n$. Consideriamo $\varphi_v:\mathbb{R}^n \rightarrow \mathbb{R}$. Allora:\\
+        $Ker(\varphi_v)=\{w \in \mathbb{R}^n: \langle v,w \rangle =0 \}$\\
+        \textbf{Notazione}: $Ker(\varphi_v)=:\langle v \rangle^\perp$.\\
+        \textbf{Terminologia}: $\langle v \rangle^\perp$ è il \textbf{sottospazio ortogonale} a v.
+        \subsection{Trovare sottospazio ortogonale}
+        \paragraph{Generalizzazione} Se $v_1=
+        \begin{bmatrix}
+            a_{11}\\
+            \vdots\\
+            a_{1n}
+        \end{bmatrix},\dots,
+        \begin{bmatrix}
+            a_{r1}\\
+            \vdots\\
+            a_{rn}
+        \end{bmatrix}$ allora:
+        $$\boldsymbol{\langle v_1,\dots,v_r \rangle^\perp = \text{\textbf{soluzioni del sistema omogeneo}:}}$$ 
+        $$\boldsymbol{\begin{bmatrix}
+            a_{11}x_1+a_{12}x_2+\dots+a_{1n}x_n=0\\
+            \vdots\\
+            a_{r1}x_1+a_{r2}x_2+\dots+a_{rn}x_n=0\\
+        \end{bmatrix}}$$
+        \paragraph{Esempio} Siano $v=
+        \begin{bmatrix}
+            1\\
+            1\\
+            1\\
+            0
+        \end{bmatrix},
+        \; w=
+        \begin{bmatrix}
+            0\\
+            1\\
+            1\\
+            1
+        \end{bmatrix}
+        \in \mathbb{R}^4$. Troviamo il sottospazio $\langle v,w \rangle^\perp$.\\
+        $\langle v,w \rangle^\perp$ è il \textbf{sottospazio delle soluzioni}:
+        $
+        \begin{cases}
+            x_1+x_2+x_3=0\\
+            x_2+x_3+x_4=0
+        \end{cases}
+        $\\
+        Troviamo una base:
+        $
+        \begin{bmatrix}
+            1 & 1 & 1 & 0\\
+            0 & 1 & 1 & 1
+        \end{bmatrix}
+        \rightarrow
+        \begin{bmatrix}
+            1 & 0 & 0 & -1\\
+            0 & 1 & 1 & 1
+        \end{bmatrix}
+        \begin{cases}
+            x_1=x_4\\
+            x_2=-x_3-x_4
+        \end{cases}
+        $\\
+        \textbf{Soluzione generale:}
+        $$
+        \begin{bmatrix}
+            s\\
+            -s-t\\
+            t\\
+            s
+        \end{bmatrix}=s
+        \begin{bmatrix}
+            1\\
+            -1\\
+            0\\
+            1
+        \end{bmatrix}+t
+        \begin{bmatrix}
+            0\\
+            -1\\
+            1\\
+            0
+        \end{bmatrix}
+        \Rightarrow
+        \boldsymbol{v_1, v_2} \text{ sono una \textbf{base} di } \boldsymbol{\langle v,w \rangle^\perp}. 
+        $$
+        \subsection{Base ortonormale}
+        \paragraph{Teorema} Ogni sottospazio $V \subset \mathbb{R}^n$ ammette una base \textbf{ortonormale}.
+        \paragraph{Corollario} Sia $\boldsymbol{v_1,\dots,v_r}$ un \textbf{sistema ortonormale} in $\mathbb{R}^n$. Allora\\
+        $\exists \; v_{r+1},\dots,v_n \in \mathbb{R}^n: v_1,\dots,v_r,v_r+1,\dots,v_n$ è una \textbf{base ortonormale (ON)} di $\mathbb{R}^n$.
+        \paragraph{Corollario} $dim \; \langle v_1,\dots,v_r \rangle^\perp = n-r$.
+        \paragraph{Corollario} \mbox{}\\
+        Sia $V \subset \mathbb{R}^n$ un sottospazio, sia $V^\perp:=\{w \in \mathbb{R}^n: \langle v,w \rangle=0, \forall v \in V\}$
+        allora $V \cap V^\perp=\{0\}$ e $Span(V,V^\perp)=\mathbb{R}^n$ e in :particolare $$\boldsymbol{dim \; V+ dim \; V^\perp=n}$$
+        \subsubsection{A cosa serve una base ortonormale?}
+        Se $v_1,\dots,v_n$ è una base \textbf{ortonormale} di $\mathbb{R}^n$ allora $$\boldsymbol{v=\sum^n_{i=1} \langle v,v_i \rangle v_i} \; \; \forall v \in \mathbb{R}^n$$
+        \subsubsection{Trovare una base ortonormale}
+        \begin{itemize}
+            \item $dim \; V=1$ Se $V=\langle v \rangle, \overline{v_1}=\frac{v}{||v||}$ è una \textbf{base ortonormale}.
+            \item $dim \; V=1$ Se $v_1,v_2$ base di $V, \overline{v_1}$
+        \end{itemize}
+        \subsubsection{Algoritmo di Gram-Schmidt}
+        \paragraph{}Se $v_1,\dots,v_n$ sono vettori \textbf{linearmente indipendenti} di V costruiamo un insieme di \textbf{vettori ortogonali} $\boldsymbol{w_1,...
+        ,w_n}$.
+        \begin{itemize}
+            \item $w_1=v_1$
+            \item $w_2=v_2-\frac{\langle v_2,w_1\rangle}{\langle w_1,w_1 \rangle}w_1$
+            \item $w_3=v_3-\frac{\langle v_3,w_1\rangle}{\langle w_1,w_1 \rangle}w_1-\frac{\langle v_3,w_2\rangle}{\langle w_2,w_2 \rangle}w_2$
+            \item \dots
+            \item $w_n=v_n-\frac{\langle v_n,w_1\rangle}{\langle w_1,w_1\rangle}w_1-\frac{\langle v_n,w_2\rangle}{\langle w_2,w_2\rangle}w_2-\dots-\frac{\langle v_{n},w_{n-1}\rangle}{\langle w_{n-1},w_{n-1}\rangle}w_{n-1}$
+        \end{itemize}
+        Trovati $\boldsymbol{w_1,\dots,w_n}$ vettori \textbf{ortogonali} li \textbf{normalizziamo}:
+        $$\boldsymbol{w'_i=\frac{w_i}{||w_i||}}$$
+        I vettori $\boldsymbol{w'_1,\dots,w'_n}$ formeranno una \textbf{base ortonormale}.
+    \chapter{Teorema spettrale}
+        \paragraph{Definizione} $A \in \mathbb{M}_{nxn}$ è \textbf{simmetrica} se $\boldsymbol{a_{ij}=a_{ji} \; \forall i,j}$ oppure se $A=A^T$ dove $\boldsymbol{A^T}$ è la \textbf{matrice trasposta}.
+        \paragraph{Lemma} Se $A \in M_{nxn}(\mathbb{R})$ è simmetrica, allora $$\boldsymbol{\langle Av,w \rangle = \langle v,Aw \rangle} \;\; \forall v,w \in \mathbb{R}^n$$
+        \paragraph{Teorema spettrale per matrici simmetriche}\mbox{}\\
+        Se $A \in M_{nxn}(\mathbb{R})$ è \textbf{simmetrica}, ogni \textbf{autovalore} di A è \textbf{reale} ed A è \textbf{diagonalizzabile} in una base \textbf{ortonormale} di \textbf{autovalori}. 
 \end{document}
