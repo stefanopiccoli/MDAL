@@ -1,0 +1,45 @@
+%PREAMBOLO
+\documentclass[a4paper, 12pt]{report}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{amsbsy}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{multicol}
+\renewcommand{\footnoterule}{
+  \kern -3pt
+  \hrule width \textwidth height 1pt
+  \kern 2pt
+}%ALLUNGA LINEA PIE DI PAGINA
+\setcounter{tocdepth}{3}%AGGIUNGE SUBSUBSECTION ALL'INDICE
+%INIZIO
+\begin{document}
+\title{
+\textbf{Matematica Discreta}}
+\author{Stefano Piccoli}
+\date{\today}
+\maketitle
+\tableofcontents
+	\chapter*{Introduzione}
+	\addcontentsline{toc}{chapter}{Introduzione}
+    \chapter{Algoritmo di Euclide}
+    \paragraph{}Siano $a$ e $b$ due interi con $0 \leq b \leq a$
+    \begin{enumerate}
+        \item Se $b=0$ allora $MCD(a,b)=a$ e l'algoritmo \textbf{termina}
+        \item Se $b\neq 0$ faccio la \textbf{divisione euclidea} tra $a$ e $b$:$$\boldsymbol{a=b \cdot q + r}, \; \; 0 \leq r \leq b$$
+            \subitem Termina quando si trova $b=0 \rightarrow MCD(a,b)$ è l'\textbf{ultimo resto non nullo}
+        \item Sostituisco $a=b$ e $b=r$ e riparto da \textbf{1}         
+    \end{enumerate}
+    \paragraph{Esempio} $a=168, b=132$
+    \begin{align*}
+        168=132\cdot 1+\textcolor{blue}{36} \rightarrow\\
+        132=36 \cdot 3 +\textcolor{green}{24} \rightarrow\\
+        36=24 \cdot 1+\textcolor{red}{12} \rightarrow\\
+        24=12\cdot 2+0
+    \end{align*}
+    
+
+    \chapter{Identità di Bezout}
+    \paragraph{}Siano $a$ e $b$ due interi e $d=MCD(a,b)$ allora esistono $\boldsymbol{x}$ e $\boldsymbol{y}$ tali che:$$a\boldsymbol{x}+b\boldsymbol{y}=d$$
+\end{document}
